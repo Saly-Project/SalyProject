@@ -17,4 +17,25 @@ To maintain a clean and organized workflow, please follow these instructions:
 
 By adhering to these guidelines, we can ensure smoother collaboration and project development!
 
+## Commit Message Conventions
 
+To maintain a clear and organized record of changes in the project, we use specific conventions for commit messages. Each message should start with a keyword followed by a brief description of the modification. Here are the keywords used and their meanings:
+
+- **`ADD`**: Used when adding something new to the project (e.g., a file, feature, or resource).
+  
+- **`UPDATE`**: Used when modifying an existing file or feature, such as an enhancement or adjustment.
+
+- **`FIX`**: Used when resolving a problem or bug.
+
+- **`DELETE`**: Used when deleting a file, feature, or resource.
+
+- **`REFACTOR`**: Used when reorganizing or optimizing code without changing its behavior. This includes code cleanup, improving readability, or rewriting sections.
+
+- **`DOCUMENT`**: Used when adding or updating project documentation.
+
+### Commit Message Format
+A good commit message typically follows this format:
+1. **Uppercase keyword** (e.g., `ADD`, `UPDATE`, `FIX`, etc.)
+2. **A colon separating the keyword and description**.
+3. **A brief description of the change**.
+4. (Optional) **A detailed description if necessary**.
