@@ -17,6 +17,8 @@ To maintain a clean and organized workflow, please follow these instructions:
 
 By adhering to these guidelines, we can ensure smoother collaboration and project development!
 
+### Logs will be uploaded on Discord for any-change done in the git
+
 ## Commit Message Conventions
 
 To maintain a clear and organized record of changes in the project, we use specific conventions for commit messages. Each message should start with a keyword followed by a brief description of the modification. Here are the keywords used and their meanings:
@@ -39,3 +41,6 @@ A good commit message typically follows this format:
 2. **A colon separating the keyword and description**.
 3. **A brief description of the change**.
 4. (Optional) **A detailed description if necessary**.
+
+
+
