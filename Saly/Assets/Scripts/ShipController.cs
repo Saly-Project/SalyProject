@@ -11,10 +11,11 @@ public class ShipController : NetworkBehaviour
 {
 
    
-
+    public Checkpoints checkpoints;
+    private int checks  = 0;
 
     // smoother camera control
-    public float pitchLimit = 87f;  
+    public float pitchLimit = 90f;  
     private float pitch = 0f; 
     private float yaw = 0f;
     public float smoothing = 0.1f;
@@ -42,7 +43,7 @@ public class ShipController : NetworkBehaviour
 
     // Movements
     public float forwardSpeed = 50f, strafeSpeed = 11f;
-    private float activeForwardSpeed, activeStrafeSpeed;
+    public float activeForwardSpeed, activeStrafeSpeed;
     private float forwardAcceleration = 1.2f, strafeAcceleration = 2f;
 
     
@@ -124,17 +125,20 @@ public class ShipController : NetworkBehaviour
         float deltaY = MouseY * sensitivity;
 
         smoothX = Mathf.Lerp(smoothX, deltaX, smoothing); 
+
         smoothY = Mathf.Lerp(smoothY, deltaY, smoothing);
 
         yaw += smoothX;
         pitch -= smoothY;
 
+        
+
         pitch = Mathf.Clamp(pitch, -pitchLimit, pitchLimit);
 
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
-
-        
         this.transform.localRotation = rotation;
+
+
     }
 
 
@@ -324,7 +328,7 @@ public class ShipController : NetworkBehaviour
     }
 
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Boost Ring")) //going through boost ring
         {

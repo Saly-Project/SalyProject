@@ -7,10 +7,13 @@ public class Projectile : NetworkBehaviour
     public GameObject impactVFX;
     private bool collided;
 
-    
 
-    
-    
+
+
+    void Start()
+    {
+        if (!IsOwner) return;
+    }
 
 
     void OnCollisionEnter(Collision co){
@@ -25,6 +28,7 @@ public class Projectile : NetworkBehaviour
 
     void Update()
     {
+        if (!IsOwner) return;
         Destroy(gameObject, 3);
     }
 }
