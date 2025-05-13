@@ -13,12 +13,17 @@ public class ForceField : MonoBehaviour
         GameObject.Instantiate(Shield);
     }
 
+    void ToggleShield()
+    {
+        IsActive = !IsActive;
+        Shield.SetActive(IsActive);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        Shield.SetActive(IsActive);
         Shield.transform.position = this.transform.position;
         if (Input.GetKeyDown(KeyCode.E))
-            IsActive = !IsActive;
+            ToggleShield();
     }
 }
