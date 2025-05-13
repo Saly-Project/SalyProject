@@ -29,15 +29,19 @@ public class WeaponShooting : NetworkBehaviour
 
     void Update()
     {
+        if (!IsOwner) return;
+
         if (!PauseMenu.isPaused && Input.GetButton("Fire") && Time.time >= timeToFire){
             timeToFire = Time.time + 1/fireRate;
             Fire();
         }
     }
 
+
+
     public void Fire(){
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        InstantiateProjectile();
+        ShootServerRpc();
 
 
         if (!Physics.Raycast(ray, out RaycastHit hit, maxRange, weaponHitLayers)){
@@ -47,43 +51,59 @@ public class WeaponShooting : NetworkBehaviour
         
         destination = hit.point;
         
-
         // damage relative to distance
         float distance = Vector3.Distance(transform.position, hit.point);
         float normalizedDistance = Mathf.Clamp01((distance - 7.5f) / (maxRange - 7.5f));
         damage = (int)Mathf.Lerp(10, 1, normalizedDistance);
 
         
-        
-
         if (hit.transform.TryGetComponent(out PlayerHealth health))
         {
             health.TakeDamageServerRpc(damage);
-            Debug.Log(damage + "damages");
+            Debug.Log(damage + "damages inflicted");
         }
-
-        
-        
-        
     }
 
 
-    private void InstantiateProjectile()
+
+    
+
+
+    [ServerRpc]
+    public void ShootServerRpc()
     {
-        // Shoot Bullet Visuals
+        
+        Vector3 offsetViseur = new Vector3(0.5f, 0.5f, 0); // Déplacer légèrement vers le haut du centre
+
+        // Récupérer la direction à partir de la position du viseur
+        Ray ray = cam.ViewportPointToRay(offsetViseur);
+        Vector3 direction = ray.direction;
+
+
         if (leftSide){
             leftSide = false;
-            GameObject projectileObj = Instantiate(projectile, LeftFirePoint.position, LeftFirePoint.rotation);
-            
+            GameObject projectileInstance = Instantiate(projectile, LeftFirePoint.position, LeftFirePoint.rotation);
+            Rigidbody rb = projectileInstance.GetComponent<Rigidbody>();
+            rb.linearVelocity = direction * 300; // linearVelocity -> velocity
+    
+            NetworkObject networkObject = projectileInstance.GetComponent<NetworkObject>();
+            networkObject.Spawn();
 
         }
             
         else {
             leftSide = true;
-            GameObject projectileObj = Instantiate(projectile, RightFirePoint.position, RightFirePoint.rotation);
-            
+            GameObject projectileInstance = Instantiate(projectile, RightFirePoint.position, RightFirePoint.rotation);
+            Rigidbody rb = projectileInstance.GetComponent<Rigidbody>();
+            rb.linearVelocity = direction * 300; // linearVelocity -> velocity
+    
+            NetworkObject networkObject = projectileInstance.GetComponent<NetworkObject>();
+            networkObject.Spawn();
         }
+        
+        
     }
+
 
     
 }
