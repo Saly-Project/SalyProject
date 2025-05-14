@@ -3111,9 +3111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Charged: 1
-  Duration: 6
+  Duration: 10
+  MaxCollisions: 3
   Shield: {fileID: 575604178227993972}
   UIshield: {fileID: 6742524636915543302}
+  RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
 --- !u!1 &5561553328476923580
 GameObject:
   m_ObjectHideFlags: 0
