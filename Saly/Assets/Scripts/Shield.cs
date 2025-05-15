@@ -14,6 +14,7 @@ public class ForceField : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Instantiate(Shield);
         UIshield.SetActive(Charged);
         Shield.SetActive(IsActive);
     }

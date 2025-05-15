@@ -8,9 +8,11 @@ public class Projectile : NetworkBehaviour
     private bool collided;
 
 
+
+
     void Start()
     {
-        Destroy(gameObject, 3);
+        if (!IsOwner) return;
     }
 
 
@@ -26,6 +28,7 @@ public class Projectile : NetworkBehaviour
 
     void Update()
     {
-        this.transform.position += transform.forward;
+        if (!IsOwner) return;
+        Destroy(gameObject, 3);
     }
 }

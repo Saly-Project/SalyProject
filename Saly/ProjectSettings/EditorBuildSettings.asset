@@ -8,21 +8,33 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SharedAssets/Benchmark/BenchmarkScene.unity
     guid: d1335b3b949d2e646b481776723757a2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Terminal/TerminalScene.unity
     guid: 4496a3dbb8d263043a4460bac5382ac5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Oasis/OasisScene.unity
     guid: 9fa2ba603a3424f9bafa4119f837f2bc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Garden/GardenScene.unity
     guid: 81e71078978223e4c8ffbf973484c9c5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cockpit/CockpitScene.unity
     guid: b78a0ca5d851e4ddf993dcc6feab56d0
   - enabled: 1
-    path: Assets/Scenes/SALY.unity
+    path: Assets/Scenes/Menu.unity
+    guid: df3d1e6710e48ec4bb75334868c9283d
+  - enabled: 1
+    path: Assets/Scenes/Maps Scenes/Warpway.unity
     guid: 9328ecf13b4db8141a3ea26aaeb8b3bf
+  - enabled: 1
+    path: Assets/Scenes/Maps Scenes/Hyperlane.unity
+    guid: f8ff7681dc9a0e24d908971f3bc58c0a
+  - enabled: 1
+    path: Assets/Scenes/Maps Scenes/Oblivion.unity
+    guid: 8dc40d468b49db247b1abff2a991056a
+  - enabled: 1
+    path: Assets/NGO_Minimal_Setup/NGO_Setup.unity
+    guid: 875825c98e337ca418637b864f8d3a4f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 290a6e6411d135049940bec2237b8938, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
