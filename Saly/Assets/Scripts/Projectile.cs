@@ -7,10 +7,11 @@ public class Projectile : NetworkBehaviour
     public GameObject impactVFX;
     private bool collided;
 
-    
 
-    
-    
+    void Start()
+    {
+        Destroy(gameObject, 3);
+    }
 
 
     void OnCollisionEnter(Collision co){
@@ -25,6 +26,6 @@ public class Projectile : NetworkBehaviour
 
     void Update()
     {
-        Destroy(gameObject, 3);
+        this.transform.position += transform.forward;
     }
 }
