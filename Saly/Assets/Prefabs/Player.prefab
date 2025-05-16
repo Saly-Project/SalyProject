@@ -3179,6 +3179,7 @@ GameObject:
   - component: {fileID: 9173964662824358329}
   - component: {fileID: 9157030301239900377}
   - component: {fileID: 5918808497096985712}
+  - component: {fileID: 4681314170115495515}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -3437,6 +3438,20 @@ MonoBehaviour:
   Shield: {fileID: 6911301092416538385}
   UIshield: {fileID: 3058236800111449501}
   RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
+--- !u!114 &4681314170115495515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516439818402100184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb290f1f51cae48d5a3f4fee17e4fe3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missilePrefab: {fileID: 3324629323341455422, guid: b2c476921dcc8410ba09a25f23868309, type: 3}
+  firePoint: {fileID: 2850296069838715382}
 --- !u!1 &5561553328476923580
 GameObject:
   m_ObjectHideFlags: 0
