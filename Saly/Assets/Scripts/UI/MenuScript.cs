@@ -5,9 +5,10 @@ public class MenuScript : MonoBehaviour
 
 {
 
-    public GameObject SettingsMenuUI;
     public GameObject MainMenuUI;
     public GameObject LobbyMenuUI;
+    public GameObject SpaceshipMenuUI;
+    public GameObject SettingsMenuUI;
 
     [SerializeField] GameObject CreateButton;
     [SerializeField] GameObject RoomCreation;
@@ -18,30 +19,44 @@ public class MenuScript : MonoBehaviour
     [SerializeField] GameObject Random;
 
 
-
-    public void Settings(){
-        MainMenuUI.SetActive(false);
-        SettingsMenuUI.SetActive(true);
-
-    }
-
-    public void BackToMain(){
-        MainMenuUI.SetActive(true);
-        SettingsMenuUI.SetActive(false);
-        LobbyMenuUI.SetActive(false);
-    }
-
-
-    public void Play(){
-        MainMenuUI.SetActive(false);
-        LobbyMenuUI.SetActive(true);
-    }
-
+    // Start Main Menu automaticaly
     void Start()
     {
         MainMenuUI.SetActive(true);
     }
 
+
+    // Main menu buttons
+    public void Play()
+    {
+        MainMenuUI.SetActive(false);
+        LobbyMenuUI.SetActive(true);
+    }
+
+    public void Spaceship()
+    {
+        MainMenuUI.SetActive(false);
+        SpaceshipMenuUI.SetActive(true);
+    }
+
+    public void Settings()
+    {
+        MainMenuUI.SetActive(false);
+        SettingsMenuUI.SetActive(true);
+    }
+
+
+    // Back to main button (does work for all menu UI) 
+    public void BackToMain()
+    {
+        LobbyMenuUI.SetActive(false);
+        SpaceshipMenuUI.SetActive(false);
+        SettingsMenuUI.SetActive(false);
+        MainMenuUI.SetActive(true);
+    }
+
+
+    // Host Buttons
     public void StartHost()
     {
         MainMenuUI.SetActive(false);
@@ -55,8 +70,7 @@ public class MenuScript : MonoBehaviour
     }
 
 
-    // map select
-
+    // Map selection
     public void HyperlaneNext()
     {
         Hyperlane.SetActive(false);
@@ -100,7 +114,6 @@ public class MenuScript : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-    
     }
 
     
