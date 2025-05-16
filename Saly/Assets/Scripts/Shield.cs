@@ -4,18 +4,17 @@ public class ForceField : MonoBehaviour
 {
     public bool Charged;
     public float Duration;
-    public int MaxCollisions;
     public GameObject Shield;
     public GameObject UIshield;
     public GameObject RechargeVFX;
 
     bool IsActive = false;
     float ShieldChrono = 0;
-    int Collisions = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Instantiate(Shield);
         UIshield.SetActive(Charged);
         Shield.SetActive(IsActive);
     }
@@ -27,7 +26,6 @@ public class ForceField : MonoBehaviour
             IsActive = true;
             Charged = false;
             ShieldChrono = Duration;
-            Collisions = 0;
             Shield.SetActive(true);
             UIshield.SetActive(false);
         }
@@ -71,14 +69,6 @@ public class ForceField : MonoBehaviour
                 UIshield.SetActive(true);
                 var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity) as GameObject;
                 Destroy(recharge, 2f);
-            }
-        }
-        else
-        {
-            Collisions++;
-            if (Collisions >= MaxCollisions)
-            {
-                DesactivateShield();
             }
         }
     }
