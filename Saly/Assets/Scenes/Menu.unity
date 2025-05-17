@@ -155,7 +155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &120858461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2108,7 +2108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousButton: {fileID: 1994209849}
   nextButton: {fileID: 1104518822}
-  spaceshipName: {fileID: 166287546}
 --- !u!1 &488700571
 GameObject:
   m_ObjectHideFlags: 0
@@ -5814,7 +5813,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1516448503}
-    PlayerPrefab: {fileID: 5516439818402100184, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+    PlayerPrefab: {fileID: 5017674571320473805, guid: 991d7c03cbf769b4f809d644abc99864, type: 3}
     Prefabs:
       NetworkPrefabsLists:
       - {fileID: 11400000, guid: ca96b987492060540a49293aa03d8344, type: 2}
@@ -5826,7 +5825,7 @@ MonoBehaviour:
     TimeResyncInterval: 30
     EnsureNetworkVariableLengthSafety: 0
     EnableSceneManagement: 1
-    ForceSamePrefabs: 1
+    ForceSamePrefabs: 0
     RecycleNetworkIds: 1
     NetworkIdRecycleDelay: 120
     RpcHashSize: 0
@@ -9600,7 +9599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2103802416
 MonoBehaviour:
   m_ObjectHideFlags: 0

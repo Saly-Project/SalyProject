@@ -5,7 +5,6 @@ public class ShipSelection : MonoBehaviour
 {
     [SerializeField] private Button previousButton;
     [SerializeField] private Button nextButton;
-    [SerializeField] private Text spaceshipName;
 
     private int currentShip;
 

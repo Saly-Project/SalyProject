@@ -49,6 +49,7 @@ public class MenuScript : MonoBehaviour
     // Back to main button (does work for all menu UI) 
     public void BackToMain()
     {
+        PlayerPrefs.Save();
         LobbyMenuUI.SetActive(false);
         SpaceshipMenuUI.SetActive(false);
         SettingsMenuUI.SetActive(false);
