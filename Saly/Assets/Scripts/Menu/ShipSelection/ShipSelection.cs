@@ -12,6 +12,7 @@ public class ShipSelection : MonoBehaviour
     private void Awake()
     {
         SelectShip(0);
+        PlayerPrefs.SetString("spaceship", transform.GetChild(currentShip).name);
     }
 
     private void SelectShip(int _index)
@@ -26,5 +27,10 @@ public class ShipSelection : MonoBehaviour
     {
         currentShip = (transform.childCount + currentShip + _change) % transform.childCount;
         SelectShip(currentShip);
+    }
+
+    public void SelectButton()
+    {
+        PlayerPrefs.SetString("spaceship", transform.GetChild(currentShip).name);
     }
 }
