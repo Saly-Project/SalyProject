@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 public class ShipSelection : MonoBehaviour
 {
-    [SerializeField] private Button previousButton;
-    [SerializeField] private Button nextButton;
-
     private int currentShip;
 
     private void Awake()
