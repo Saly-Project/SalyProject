@@ -1,80 +1,50 @@
 using UnityEngine;
-using Unity.Netcode;
 
-public class AIController : NetworkBehaviour
+public class AIController : MonoBehaviour
 {
-    public Transform[] waypoints; // Waypoints for the track
-    public float baseSpeed = 10f; // Base speed
-    public float turnSpeed = 5f; // Turning speed
-    public float aggressiveness = 1f; // Aggressiveness level (1 = normal, >1 = more aggressive)
-    public float reactionTime = 0.5f; // Delay in reacting to changes (lower = faster reaction)
-    public float speedVariation = 2f; // Random speed variation
+    [SerializeField] private string checkpointTag = "Checkpoint"; // Tag for checkpoint objects
+    [SerializeField] private float speed = 10f; // Movement speed of the bot
+    [SerializeField] private float rotationSpeed = 5f; // Rotation speed of the bot
 
-    private int currentWaypointIndex = 0;
-    private float currentSpeed;
-    private float reactionTimer;
+    private Transform[] checkpoints; // Array to store checkpoint transforms
+    private int currentCheckpointIndex = 0;
 
-    void Start()
+    private void Start()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb != null)
+        // Find all checkpoint instances in the scene by tag
+        GameObject[] checkpointObjects = GameObject.FindGameObjectsWithTag(checkpointTag);
+        checkpoints = new Transform[checkpointObjects.Length];
+
+        for (int i = 0; i < checkpointObjects.Length; i++)
         {
-            rb.useGravity = false; // Disable gravity
+            checkpoints[i] = checkpointObjects[i].transform;
         }
-    }
 
-    public void InitializeAI()
-    {
-        // Assign waypoints dynamically if needed
-        currentSpeed = baseSpeed + Random.Range(-speedVariation, speedVariation);
+        // Sort checkpoints by their name or position if needed
+        // Example: Sort by name (assuming names like "Checkpoint1", "Checkpoint2", etc.)
+        System.Array.Sort(checkpoints, (a, b) => a.name.CompareTo(b.name));
     }
 
     private void Update()
     {
-        reactionTimer += Time.deltaTime;
+        if (checkpoints == null || checkpoints.Length == 0) return; // Ensure checkpoints are assigned
 
-        // React to changes only after the reaction time has passed
-        if (reactionTimer >= reactionTime)
-        {
-            MoveTowardsWaypoint();
-            reactionTimer = 0f;
-        }
-    }
+        // Get the current checkpoint
+        Transform targetCheckpoint = checkpoints[currentCheckpointIndex];
 
-    private void MoveTowardsWaypoint()
-    {
-        if (waypoints.Length == 0) return;
+        // Move towards the checkpoint
+        Vector3 direction = (targetCheckpoint.position - transform.position).normalized;
+        transform.position += direction * speed * Time.deltaTime;
 
-        Transform targetWaypoint = waypoints[currentWaypointIndex];
-        Vector3 direction = (targetWaypoint.position - transform.position).normalized;
-
-        // Adjust speed based on aggressiveness
-        float adjustedSpeed = currentSpeed * aggressiveness;
-
-        // Move forward
-        Vector3 newPosition = transform.position + direction * adjustedSpeed * Time.deltaTime;
-
-        // Rotate towards the waypoint
+        // Rotate towards the checkpoint
         Quaternion targetRotation = Quaternion.LookRotation(direction);
-        Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-        // Synchronize position and rotation
-        UpdateAIPositionServerRpc(newPosition, newRotation);
-
-        // Check if the AI reached the waypoint
-        if (Vector3.Distance(transform.position, targetWaypoint.position) < 1f)
+        // Check if the bot has reached the checkpoint
+        if (Vector3.Distance(transform.position, targetCheckpoint.position) < 1f)
         {
-            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
-
-            // Randomize speed slightly at each waypoint
-            currentSpeed = baseSpeed + Random.Range(-speedVariation, speedVariation);
+            // Move to the next checkpoint
+            currentCheckpointIndex = (currentCheckpointIndex + 1) % checkpoints.Length;
         }
-    }
-
-    [ServerRpc]
-    private void UpdateAIPositionServerRpc(Vector3 position, Quaternion rotation)
-    {
-        transform.position = position;
-        transform.rotation = rotation;
     }
 }

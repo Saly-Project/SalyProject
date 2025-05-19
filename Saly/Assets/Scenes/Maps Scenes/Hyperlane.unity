@@ -185,6 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 168033014}
+  - component: {fileID: 168033015}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -207,6 +208,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &168033015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168033012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59bbb0610927d94e83f5a500a09bb7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  botPrefab: {fileID: 5516439818402100184, guid: c322e891c9cff104a93cc66adae24e71, type: 3}
+  spawnPositions:
+  - {fileID: 1947813983}
+  - {fileID: 1377358448}
+  - {fileID: 1306036494}
 --- !u!1 &209191858
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +861,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1306036493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1306036494}
+  m_Layer: 0
+  m_Name: SpawnPoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1306036494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306036493}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.25627217, z: -0, w: 0.96660465}
+  m_LocalPosition: {x: -80, y: 0.468, z: -47.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -29.698, z: 0}
+--- !u!1 &1377358447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1377358448}
+  m_Layer: 0
+  m_Name: SpawnPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1377358448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377358447}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.25627217, z: -0, w: 0.96660465}
+  m_LocalPosition: {x: -79.31, y: 0.468, z: -48.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -29.698, z: 0}
 --- !u!1001 &1527109930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1035,6 +1115,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+--- !u!1 &1947813982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1947813983}
+  m_Layer: 0
+  m_Name: SpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1947813983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947813982}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.25627217, z: -0, w: 0.96660465}
+  m_LocalPosition: {x: -81.118, y: 0.468, z: -45.107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -29.698, z: 0}
 --- !u!1 &1976353738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,6 +2102,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.11
       objectReference: {fileID: 0}
+    - target: {fileID: 511724921200901397, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint17
+      objectReference: {fileID: 0}
     - target: {fileID: 516595266025277539, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.11
@@ -2014,6 +2129,14 @@ PrefabInstance:
     - target: {fileID: 538521732629460170, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 685010768051426184, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint11
+      objectReference: {fileID: 0}
+    - target: {fileID: 690709462675285449, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint6
       objectReference: {fileID: 0}
     - target: {fileID: 848288799167881167, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
@@ -2050,6 +2173,10 @@ PrefabInstance:
     - target: {fileID: 926195728066346518, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 962966856521545370, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint20
       objectReference: {fileID: 0}
     - target: {fileID: 969636460081174296, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
@@ -2135,6 +2262,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.11
       objectReference: {fileID: 0}
+    - target: {fileID: 1491792974469707366, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657211493226696793, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint24
+      objectReference: {fileID: 0}
     - target: {fileID: 1665643681290585879, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.11
@@ -2219,6 +2354,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.11
       objectReference: {fileID: 0}
+    - target: {fileID: 2720733736650747083, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint9
+      objectReference: {fileID: 0}
     - target: {fileID: 2724043358997765479, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.11
@@ -2230,11 +2369,19 @@ PrefabInstance:
     - target: {fileID: 2724043358997765479, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2792282308855516001, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint13
       objectReference: {fileID: 0}
     - target: {fileID: 2925468972566306847, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_Name
       value: Checkpoint Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2925468972566306847, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_TagString
+      value: CheckpointParent
+      objectReference: {fileID: 0}
     - target: {fileID: 2927005129715692083, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.11
@@ -2271,6 +2418,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.11
       objectReference: {fileID: 0}
+    - target: {fileID: 3295017435403272790, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint2
+      objectReference: {fileID: 0}
     - target: {fileID: 3318173387698939435, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.11
@@ -2306,6 +2457,10 @@ PrefabInstance:
     - target: {fileID: 3648413251614953450, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3697400379564978781, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint14
       objectReference: {fileID: 0}
     - target: {fileID: 3721153997870491678, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
@@ -2403,6 +2558,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.11
       objectReference: {fileID: 0}
+    - target: {fileID: 4235938546410365442, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361171699510278417, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434069347779756598, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516467086475509135, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668043727410028333, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839882403009574159, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint5
+      objectReference: {fileID: 0}
     - target: {fileID: 4959048606259199667, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.11
@@ -2415,6 +2594,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.11
       objectReference: {fileID: 0}
+    - target: {fileID: 5449161261220671820, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint18
+      objectReference: {fileID: 0}
     - target: {fileID: 5785077953190975500, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.11
@@ -2426,6 +2609,18 @@ PrefabInstance:
     - target: {fileID: 5785077953190975500, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840174675042519428, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866734042581185502, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880286495110814587, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint21
       objectReference: {fileID: 0}
     - target: {fileID: 5895719050766184245, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
@@ -2463,6 +2658,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.11
       objectReference: {fileID: 0}
+    - target: {fileID: 6076786477402989344, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint4
+      objectReference: {fileID: 0}
     - target: {fileID: 6231781772528167733, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.11
@@ -2499,6 +2698,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.11
       objectReference: {fileID: 0}
+    - target: {fileID: 6952751866178229209, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090500500237494235, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint23
+      objectReference: {fileID: 0}
     - target: {fileID: 7133434791868496599, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.11
@@ -2534,6 +2741,10 @@ PrefabInstance:
     - target: {fileID: 7338126371247224996, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373797550324977716, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint22
       objectReference: {fileID: 0}
     - target: {fileID: 7482107723116893605, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
@@ -2606,6 +2817,10 @@ PrefabInstance:
     - target: {fileID: 7836059488124952628, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997563715438780235, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint8
       objectReference: {fileID: 0}
     - target: {fileID: 8372195059160208069, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
       propertyPath: m_LocalScale.x
@@ -2781,6 +2996,9 @@ SceneRoots:
   - {fileID: 4586808003311093005}
   - {fileID: 168033014}
   - {fileID: 856374671}
+  - {fileID: 1947813983}
+  - {fileID: 1377358448}
+  - {fileID: 1306036494}
   - {fileID: 239713445}
   - {fileID: 209191859}
   - {fileID: 1527109930}
