@@ -4,6 +4,7 @@ public class BotManager : MonoBehaviour
 {
     [SerializeField] private GameObject botPrefab; // Assign your bot prefab in the Unity Inspector
     [SerializeField] private Transform[] spawnPositions; // Assign 3 spawn positions in the Unity Inspector
+    [SerializeField] private Transform[] checkpoints; // Assign these in the Inspector
 
     private void Start()
     {
@@ -16,15 +17,24 @@ public class BotManager : MonoBehaviour
 
     private void SpawnBots()
     {
-        if (spawnPositions.Length < 3)
+        if (spawnPositions == null || spawnPositions.Length == 0)
         {
-            Debug.LogError("Not enough spawn positions assigned!");
+            Debug.LogError("No spawn positions assigned!");
             return;
         }
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < spawnPositions.Length; i++)
         {
-            Instantiate(botPrefab, spawnPositions[i].position, spawnPositions[i].rotation);
+            GameObject bot = Instantiate(botPrefab, spawnPositions[i].position, spawnPositions[i].rotation);
+            AIController ai = bot.GetComponent<AIController>();
+            if (ai != null)
+            {
+                ai.SetCheckpoints(checkpoints);
+            }
+            else
+            {
+                Debug.LogWarning("Spawned bot has no AIController attached!");
+            }
         }
     }
 }
