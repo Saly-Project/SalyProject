@@ -1071,7 +1071,8 @@ PlayerSettings:
   windowsGamepadBackendHint: 0
   cloudProjectId: 50da38cf-1445-40ef-afe0-b6e288fbc359
   framebufferDepthMemorylessMode: 0
-  qualitySettingsNames: []
+  qualitySettingsNames:
+  - PC High
   projectName: Saly
   organizationId: unity_7b619471fcec4365a246
   cloudEnabled: 0

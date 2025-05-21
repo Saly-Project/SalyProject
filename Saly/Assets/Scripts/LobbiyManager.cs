@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
@@ -17,15 +18,45 @@ public class LobbiesList : MonoBehaviourPunCallbacks
     public GameObject randomUI;
 
     private string selectedMap = "Hyperlane";
+    private bool isInLobby = false; // ✅ Track connection state
+    private Dictionary<string, RoomInfo> cachedRoomList = new Dictionary<string, RoomInfo>();
+
 
     void Start()
     {
+        PhotonNetwork.AutomaticallySyncScene = true;
         createRoomButton.onClick.AddListener(OnCreateRoomClicked);
+    }
+
+    public override void OnConnectedToMaster()
+    {
+        Debug.Log("✅ Connected to Master. Joining lobby...");
+        PhotonNetwork.JoinLobby(); // ✅ only after this can we create rooms
+    }
+
+    public override void OnJoinedLobby()
+    {
+        Debug.Log("✅ Joined Lobby.");
+        isInLobby = true;
     }
 
     public void OnCreateRoomClicked()
     {
         Debug.Log("🟢 Clicked Create Room");
+
+        // 🔒 Photon-level readiness check
+        if (!PhotonNetwork.IsConnectedAndReady)
+        {
+            Debug.LogWarning("⚠️ Photon is not ready yet. Wait for OnConnectedToMaster.");
+            return;
+        }
+
+        // 🔒 App-level flag check
+        if (!UsernameFlowManager.JoinedLobby)
+        {
+            Debug.LogWarning("⚠️ You're not in the lobby yet! Wait until OnJoinedLobby is triggered.");
+            return;
+        }
 
         if (createRoomInput == null)
         {
@@ -50,15 +81,11 @@ public class LobbiesList : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom(roomName, options);
     }
 
-    public void OnJoinRoom(string roomName)
-    {
-        PhotonNetwork.JoinRoom(roomName);
-    }
-
     public override void OnJoinedRoom()
     {
         if (PhotonNetwork.IsMasterClient)
         {
+            Debug.Log("✅ Successfully joined room, loading map: " + selectedMap);
             PhotonNetwork.LoadLevel(selectedMap);
         }
     }
@@ -106,4 +133,54 @@ public class LobbiesList : MonoBehaviourPunCallbacks
         oblivionUI.SetActive(true);
         selectedMap = "Oblivion";
     }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        foreach (RoomInfo info in roomList)
+        {
+            if (info.RemovedFromList || info.PlayerCount >= info.MaxPlayers)
+            {
+                if (cachedRoomList.ContainsKey(info.Name))
+                    cachedRoomList.Remove(info.Name);
+            }
+            else
+            {
+                cachedRoomList[info.Name] = info;
+            }
+        }
+
+        UpdateRoomListUI();
+    }
+
+    void UpdateRoomListUI()
+    {
+        Debug.Log("🔁 Updating Room List... Total: " + cachedRoomList.Count);
+
+        foreach (Transform child in roomListContainer)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (RoomInfo room in cachedRoomList.Values)
+        {
+            Debug.Log("🧩 Room: " + room.Name + " (" + room.PlayerCount + "/" + room.MaxPlayers + ")");
+
+            GameObject entry = Instantiate(roomListEntryPrefab, roomListContainer);
+
+            // ✅ Use Legacy Text
+            entry.transform.Find("RoomName").GetComponent<Text>().text = room.Name;
+            entry.transform.Find("RoomSpace").GetComponent<Text>().text = room.PlayerCount + " / " + room.MaxPlayers;
+
+            Button joinButton = entry.transform.Find("JoinButton").GetComponent<Button>();
+            string roomName = room.Name;
+            joinButton.onClick.AddListener(() => OnJoinRoom(roomName));
+        }
+    }
+
+    public void OnJoinRoom(string roomName)
+    {
+        Debug.Log("🔁 Joining room: " + roomName);
+        PhotonNetwork.JoinRoom(roomName);
+    }
+
 }

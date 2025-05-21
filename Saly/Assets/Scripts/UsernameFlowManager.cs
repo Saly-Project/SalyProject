@@ -16,6 +16,7 @@ public class UsernameFlowManager : MonoBehaviourPunCallbacks
     public GameObject mainMenuPanel;
     public GameObject loadingScreen;
     public SpinnerController spinnerController;
+    public static bool JoinedLobby = false;
 
     private bool connectedToLobby = false;
 
@@ -82,12 +83,10 @@ public class UsernameFlowManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        if (spinnerController != null)
-            spinnerController.HideLoading();
-
+        JoinedLobby = true;
+        spinnerController.HideLoading();
         loadingScreen.SetActive(false);
         lobbyPanel.SetActive(true);
-
         StartCoroutine(ShowLobbyWithDelay());
     }
 
