@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Shield : MonoBehaviour
+public class BotShield : MonoBehaviour
 {
     public bool Charged;
     public float Duration;
     public GameObject ObjShield;
-    public GameObject UIshield;
+    
     public GameObject RechargeVFX;
 
     bool IsActive = false;
@@ -15,7 +15,7 @@ public class Shield : MonoBehaviour
     void Start()
     {
         Instantiate(ObjShield);
-        UIshield.SetActive(Charged);
+        
         ObjShield.SetActive(IsActive);
     }
 
@@ -27,7 +27,7 @@ public class Shield : MonoBehaviour
             Charged = false;
             ShieldChrono = Duration;
             ObjShield.SetActive(true);
-            UIshield.SetActive(false);
+            
         }
     }
 
@@ -66,7 +66,7 @@ public class Shield : MonoBehaviour
             {
                 Charged = true;
                 Destroy(other.gameObject);
-                UIshield.SetActive(true);
+                
                 var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity) as GameObject;
                 Destroy(recharge, 2f);
             }

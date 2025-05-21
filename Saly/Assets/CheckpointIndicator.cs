@@ -11,23 +11,29 @@ public class CheckpointIndicator : MonoBehaviour
     public float screenEdgeBuffer = 50f;
 
     private RectTransform canvasRect;
-    public CheckpointManager manager;
+    public CheckpointManager managerHyperlane;
+    public CheckpointManager managerWarpway;
+    public CheckpointManager managerOblivion;
 
-    
+
+    private CheckpointManager manager;
 
 
-    
+
+
 
     void Awake()
     {
-        
+
         Canvas parentCanvas = indicatorUI.GetComponentInParent<Canvas>();
-        
+
         canvasRect = parentCanvas.GetComponent<RectTransform>();
-        
+
         checkpointTarget = null;
-        
-        
+
+        if (this.gameObject.scene.name == "Hyperlane") manager = managerHyperlane;
+        if (this.gameObject.scene.name == "Warpway") manager = managerWarpway;
+        if (this.gameObject.scene.name == "Oblivion") manager = managerOblivion;
     }
 
 

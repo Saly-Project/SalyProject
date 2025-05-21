@@ -3419,7 +3419,9 @@ MonoBehaviour:
   cam: {fileID: 3993437552192675227}
   indicatorUI: {fileID: 4668932163784422394}
   screenEdgeBuffer: 50
-  manager: {fileID: 4377179817373442327, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+  managerHyperlane: {fileID: 5687794424606858033, guid: 29543214b6520bd41bd80ccb7f4d616c, type: 3}
+  managerWarpway: {fileID: 6844916966598154009, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+  managerOblivion: {fileID: 7763918528693718541, guid: cd3e981aaa676cf439d74c6a360777a9, type: 3}
 --- !u!114 &5918808497096985712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3434,7 +3436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Charged: 1
   Duration: 6
-  Shield: {fileID: 6911301092416538385}
+  ObjShield: {fileID: 6911301092416538385}
   UIshield: {fileID: 3058236800111449501}
   RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
 --- !u!1 &5561553328476923580
@@ -10621,6 +10623,10 @@ PrefabInstance:
     - target: {fileID: 2955322174178533430, guid: b20aa218d77366a4bafedfee464c9b40, type: 3}
       propertyPath: m_Name
       value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955322174178533430, guid: b20aa218d77366a4bafedfee464c9b40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

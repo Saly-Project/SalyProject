@@ -723,6 +723,37 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!1 &5280660834610289128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236483768637959792}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &236483768637959792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280660834610289128}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.060000002, z: 0.15999998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5481511871572575658}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5516439818402100184
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +770,6 @@ GameObject:
   - component: {fileID: 9113070640145657133}
   - component: {fileID: -575212599671118019}
   - component: {fileID: 9173964662824358329}
-  - component: {fileID: 9157030301239900377}
   - component: {fileID: 5918808497096985712}
   - component: {fileID: -3546272159375034102}
   m_Layer: 7
@@ -767,6 +797,7 @@ Transform:
   - {fileID: 2850296069838715382}
   - {fileID: 8813770219011209700}
   - {fileID: 6269321795399107887}
+  - {fileID: 236483768637959792}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &9168688214959797974
@@ -808,7 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2432963582
+  GlobalObjectIdHash: 3450707892
   InScenePlacedSourceGlobalObjectIdHash: 1926685899
   DeferredDespawnTick: 0
   Ownership: 1
@@ -866,7 +897,7 @@ MonoBehaviour:
   MoveVertical: 0
   PlayerSelfLayer: 6
   checkpointManager: {fileID: 5687794424606858033, guid: 29543214b6520bd41bd80ccb7f4d616c, type: 3}
-  indicator: {fileID: 9157030301239900377}
+  indicator: {fileID: 0}
 --- !u!114 &6790510769626839814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,23 +995,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.59, y: 0.36, z: 1.03}
   m_Center: {x: 0, y: 0.06, z: 0.16}
---- !u!114 &9157030301239900377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5516439818402100184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4650ddd1a0a54d941acbcd72eb8322ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpointTarget: {fileID: 9138043085225011931, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
-  cam: {fileID: 0}
-  indicatorUI: {fileID: 0}
-  screenEdgeBuffer: 50
-  manager: {fileID: 4377179817373442327, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
 --- !u!114 &5918808497096985712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,8 +1009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Charged: 1
   Duration: 6
-  Shield: {fileID: 6911301092416538385}
-  UIshield: {fileID: 0}
+  ObjShield: {fileID: 6911301092416538385}
+  UIshield: {fileID: 5280660834610289128}
   RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
 --- !u!114 &-3546272159375034102
 MonoBehaviour:
