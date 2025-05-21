@@ -5,6 +5,8 @@ public class BotManager : MonoBehaviour
     [SerializeField] private GameObject botPrefab; // Assign your bot prefab in the Unity Inspector
     [SerializeField] private Transform[] spawnPositions; // Assign 3 spawn positions in the Unity Inspector
     [SerializeField] private Transform[] checkpoints; // Assign these in the Inspector
+    [SerializeField] private float baseBotSpeed = 20f;      // Set this in the Inspector
+    [SerializeField] private float botSpeedVariance = 3f;   // Set this in the Inspector
 
     private void Start()
     {
@@ -30,6 +32,10 @@ public class BotManager : MonoBehaviour
             if (ai != null)
             {
                 ai.SetCheckpoints(checkpoints);
+
+                float randomSpeed = baseBotSpeed + Random.Range(-botSpeedVariance, botSpeedVariance);
+                ai.SetSpeed(randomSpeed);
+                ai.SetSpeedVariance(botSpeedVariance); // Pass the variance for future randomization
             }
             else
             {

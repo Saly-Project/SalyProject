@@ -249,6 +249,8 @@ MonoBehaviour:
   - {fileID: 3516210795872562734}
   - {fileID: 3516210795872562733}
   - {fileID: 3516210795872562732}
+  - {fileID: 1778942192}
+  - {fileID: 1778942191}
   - {fileID: 3516210795872562731}
   - {fileID: 3516210795872562730}
   - {fileID: 3516210795872562729}
@@ -282,6 +284,8 @@ MonoBehaviour:
   - {fileID: 3516210795872562701}
   - {fileID: 3516210795872562700}
   - {fileID: 3516210795872562699}
+  baseBotSpeed: 55
+  botSpeedVariance: 8
 --- !u!1 &209191858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,6 +1171,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+--- !u!4 &1778942191 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7482107723116893605, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+  m_PrefabInstance: {fileID: 3516210795872562695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1778942192 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7836059488124952628, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+  m_PrefabInstance: {fileID: 3516210795872562695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1947813982
 GameObject:
   m_ObjectHideFlags: 0
