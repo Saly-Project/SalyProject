@@ -1,35 +1,80 @@
+using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class MissileLauncher : MonoBehaviour
 {
-    public GameObject missilePrefab;
+    public bool Charged;
+    public float searchRadius;
+
     public Transform firePoint;
 
-    public int maxMissiles = 3;        // Nombre total autorisé
-    private int missilesFired = 0;     // Nombre déjà tirés
-    private GameObject currentMissile; // Missile actuellement actif
+    public GameObject missilePrefab;
+    public GameObject UImissile;
+    public GameObject RechargeVFX;
 
-    void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        UImissile.SetActive(Charged);
+    }
+
+    void LauchMissile()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Player");
+        GameObject nearestEnemy = null;
+        float shortestDistance = Mathf.Infinity;
+
+        foreach (GameObject enemy in enemies)
         {
-            // Conditions : pas déjà un missile en vol ET limite pas atteinte
-            if (currentMissile == null && missilesFired < maxMissiles)
+            if (enemy != gameObject)
             {
-                currentMissile = Instantiate(missilePrefab, firePoint.position, firePoint.rotation);
-                missilesFired++;
-                Debug.Log("Missile lancé (" + missilesFired + "/" + maxMissiles + ")");
-            }
-            else if (missilesFired >= maxMissiles)
-            {
-                Debug.Log("Plus de missiles disponibles !");
+                float dist = Vector3.Distance(transform.position, enemy.transform.position);
+                if (dist < shortestDistance)
+                {
+                    nearestEnemy = enemy;
+                    shortestDistance = dist;
+                }
             }
         }
 
-        // Réinitialiser si le missile a été détruit
-        if (currentMissile == null && missilesFired < maxMissiles)
+        if (nearestEnemy != null && shortestDistance <= searchRadius)
         {
-            // Rien à faire ici sauf réarmement (optionnel)
+            Charged = false;
+            UImissile.SetActive(false);
+            GameObject missile = Instantiate(missilePrefab, firePoint.position, firePoint.rotation);
+            missile.SendMessage("SetTarget", nearestEnemy);
+        }
+        else
+        {
+            // UI : no enemies in range
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (Charged)
+            {
+                LauchMissile();
+            }
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Skill Recharge"))
+        {
+            if (!Charged)
+            {
+                Charged = true;
+                Destroy(other.gameObject);
+                UImissile.SetActive(true);
+                var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity) as GameObject;
+                Destroy(recharge, 2f);
+            }
         }
     }
 }

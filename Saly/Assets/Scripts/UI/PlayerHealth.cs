@@ -7,8 +7,8 @@ using System;
 
 public class PlayerHealth : NetworkBehaviour
 {
-    [SerializeField] public float maxHealth = 100;
-    [SerializeField] private float _Health;
+    public float maxHealth = 100;
+    private float _Health;
 
     // UI and recharge
     public Image HealthBar;

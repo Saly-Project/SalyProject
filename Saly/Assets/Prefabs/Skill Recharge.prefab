@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 426513850523608982, guid: 200796a576a0b9d4d904a21f3f1ec088, type: 3}
       propertyPath: m_Name
-      value: Shield Recharge
+      value: Skill Recharge
       objectReference: {fileID: 0}
     - target: {fileID: 760230905610904080, guid: 200796a576a0b9d4d904a21f3f1ec088, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8527092374782670607, guid: 200796a576a0b9d4d904a21f3f1ec088, type: 3}
       propertyPath: m_TagString
-      value: Shield Recharge
+      value: Skill Recharge
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
