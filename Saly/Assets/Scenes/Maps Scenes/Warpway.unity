@@ -1834,6 +1834,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 209191859}
     m_Modifications:
+    - target: {fileID: 72284176681140740, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 228753008999292600, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 238314245404278470, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 549653416256272170, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 956955572191011063, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 1541002931156111996, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 1548813097264172906, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 1907231558615045386, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 1983620079002717538, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
     - target: {fileID: 2058149050177297621, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
       propertyPath: m_LocalPosition.x
       value: 569.61957
@@ -1874,10 +1910,110 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2121179928012250223, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 2154097959279402008, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 2274398588766580958, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 2590667228053349322, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 2650938741726256941, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 2856600196176350033, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 3024155714027640935, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 3518773525776037158, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 3537178082634985845, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 3646385677561909710, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 3708091798330621811, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 3904194551387177647, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 4132594736284014704, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 4326465477043060540, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 4846363802627558616, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 4890247241158803945, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 5071824834271655011, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
     - target: {fileID: 5393483773621884433, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
       propertyPath: m_Name
       value: Checkpoints
       objectReference: {fileID: 0}
+    - target: {fileID: 5487721017750224884, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 6083429697328150613, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 6282762682889463544, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 6449874621866937775, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 6498917568733672310, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 6596000441994015388, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 6696884048647764412, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 6709137698848030809, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
     - target: {fileID: 6844916966598154009, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
       propertyPath: checkpoints.Array.size
       value: 44
@@ -2110,6 +2246,46 @@ PrefabInstance:
       propertyPath: 'checkpoints.Array.data[57]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6913835939921006391, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 6919427340448589773, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 7470589343336023794, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 7963250246027895123, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 8203411298826846550, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 8440286560620104970, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 8553583196284279189, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 8608688616218026260, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 8959460299416967115, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 9127489096673506722, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: CheckpointFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7546205421863264161, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}

@@ -3273,6 +3273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  FXVolume: 1
+  boostFX: {fileID: 8300000, guid: 322461ae237f01440aceead72cabbc33, type: 3}
   pitchLimit: 90
   smoothing: 0.1
   StaminaBar: {fileID: 6174116428998889259}
@@ -3321,6 +3323,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   cam: {fileID: 3993437552192675227}
   projectile: {fileID: 7776095189224040569, guid: 25ca20d5887ebe544966e7e37355cc6a, type: 3}
+  projectileFX: {fileID: 8300000, guid: dd374ce22cd87884caf4b0ede0dd8b4b, type: 3}
   LeftFirePoint: {fileID: 2850296069838715382}
   RightFirePoint: {fileID: 8813770219011209700}
   fireRate: 8
