@@ -3100,7 +3100,7 @@ MonoBehaviour:
   ChargeRate: 10
   camera: {fileID: 3993437552192675227}
   BoostRecharge: {fileID: 0}
-  RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
+  RechargeVFX: {fileID: 3248635198738779518, guid: 74985e9b3da24e443a370057350268a4, type: 3}
   BoostWave: {fileID: 3659784586199771657, guid: 2466cf17adcce014984bf8db299efe03, type: 3}
   ShipBody: {fileID: 9011041059911779299}
   LeftTurn: {fileID: 1186745124011743669}
@@ -3197,7 +3197,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   maxHealth: 100
-  _Health: 0
   HealthBar: {fileID: 3064858532616371015}
   ChargeRate: 10
 --- !u!65 &9173964662824358329
