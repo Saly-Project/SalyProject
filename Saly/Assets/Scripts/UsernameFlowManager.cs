@@ -22,14 +22,22 @@ public class UsernameFlowManager : MonoBehaviourPunCallbacks
 
     void Start()
     {
+        PhotonNetwork.AutomaticallySyncScene = true;         // optional but best practice
+
         usernamePanel.SetActive(false);
         lobbyPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
         confirmButton.interactable = false;
-        loadingScreen.SetActive(false);
+        loadingScreen.SetActive(false);                       // Show loading UI
 
         if (statusText != null)
-            statusText.text = "";
+            statusText.text = "🔌 Connecting to Photon...";
+
+        if (PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.Disconnect(); // Ensures you reset connection unless triggered manually
+        }
+
     }
 
     public void OnUsernameChanged()
@@ -39,6 +47,8 @@ public class UsernameFlowManager : MonoBehaviourPunCallbacks
 
     public void OnConfirmUsername()
     {
+        Debug.Log("🟡 Button clicked");
+
         string playerName = usernameInput.text.Trim();
 
         if (string.IsNullOrEmpty(playerName))
@@ -50,7 +60,7 @@ public class UsernameFlowManager : MonoBehaviourPunCallbacks
 
         PhotonNetwork.NickName = playerName;
 
-        // Show loading screen
+        // Show loading screen immediately
         usernamePanel.SetActive(false);
         mainMenuPanel.SetActive(false);
         loadingScreen.SetActive(true);
@@ -61,17 +71,17 @@ public class UsernameFlowManager : MonoBehaviourPunCallbacks
         if (statusText != null)
             statusText.text = "Connecting...";
 
-        if (PhotonNetwork.IsConnectedAndReady)
+        if (!PhotonNetwork.IsConnectedAndReady)
         {
-            if (statusText != null)
-                statusText.text = "Already connected. Joining lobby...";
-            PhotonNetwork.JoinLobby();
+            Debug.LogWarning("❌ Photon is not connected or ready.");
+            PhotonNetwork.ConnectUsingSettings(); // ✅ Connect AFTER showing the screen
+            return;
         }
-        else
-        {
-            PhotonNetwork.ConnectUsingSettings();
-        }
+
+        Debug.Log("✅ Photon is ready. Continuing...");
+        PhotonNetwork.JoinLobby();
     }
+
 
     public override void OnConnectedToMaster()
     {
@@ -83,10 +93,24 @@ public class UsernameFlowManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
+        if (!usernamePanel.activeSelf && !loadingScreen.activeSelf)
+        {
+            Debug.Log("⛔ Prevented auto-joining lobby (not triggered from username flow)");
+            return;
+        }
+
+        Debug.Log("✅ Joined lobby from username flow");
         JoinedLobby = true;
-        spinnerController.HideLoading();
+
+        // ✅ Proper cleanup
+        if (spinnerController != null)
+            spinnerController.HideLoading();
+
         loadingScreen.SetActive(false);
+        usernamePanel.SetActive(false); // <--- this line is key
+        mainMenuPanel.SetActive(false); // <--- also hide menu just in case
         lobbyPanel.SetActive(true);
+
         StartCoroutine(ShowLobbyWithDelay());
     }
 
@@ -131,4 +155,10 @@ public class UsernameFlowManager : MonoBehaviourPunCallbacks
         loadingScreen.SetActive(false);
         lobbyPanel.SetActive(true);
     }
+
+    public void TestClick()
+{
+    Debug.Log("✅ TestClick triggered!");
+}
+
 }
