@@ -49,5 +49,6 @@ public class AIController : MonoBehaviour
             // Randomize speed each time a checkpoint is reached
             speed = baseSpeed + Random.Range(-speedVariance, speedVariance);
         }
+        
     }
 }
