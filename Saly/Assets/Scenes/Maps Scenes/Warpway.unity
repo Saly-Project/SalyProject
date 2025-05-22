@@ -194,6 +194,7 @@ Transform:
   m_Children:
   - {fileID: 1976353740}
   - {fileID: 1623705424}
+  - {fileID: 676090512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &239713441
@@ -358,6 +359,11 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.38
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &373818603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5393483773621884433, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+  m_PrefabInstance: {fileID: 5693912428607491600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &499478973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -551,6 +557,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508908547}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &676090511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676090512}
+  - component: {fileID: 676090513}
+  m_Layer: 0
+  m_Name: Asteroids
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &676090512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676090511}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 209191859}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &676090513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676090511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820a0e8b024b0c243907d570df500e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointsParent: {fileID: 373818603}
+  asteroidPrefabs:
+  - {fileID: 4075925118643941747, guid: 83f5645e4eff8a94c92f2bafdec431ef, type: 3}
+  - {fileID: 8383290500737640664, guid: 9899017ff9b673845a20a3d3932031d8, type: 3}
+  - {fileID: 2402462298040864268, guid: f8ce74635e5b273409a7efd42cbca4ad, type: 3}
+  interpolationDistance: 45
+  asteroidsPerPoint: 3
+  tunnelRadius: 80
+  safeRadius: 10
+  particleHintPrefab: {fileID: 4296092947322784869, guid: ac91587cb11597243b11ed3b0e8d0ee5, type: 3}
+  particleSpacing: 20
 --- !u!1 &679908579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 426513850523608982, guid: 200796a576a0b9d4d904a21f3f1ec088, type: 3}

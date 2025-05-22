@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AsteroidWanderSmooth : MonoBehaviour
 {
-    public Vector3 rotationSpeed = new Vector3(5f, 10f, 2f);
+    private Vector3 rotationSpeed;
     public float movementRadius = 3f;
     public float moveDuration = 4f; // Durée entre deux positions
     public float transitionSmoothness = 0.5f; // 0 = très rigide, 1 = très lisse
@@ -16,6 +16,7 @@ public class AsteroidWanderSmooth : MonoBehaviour
     {
         initialPosition = transform.position;
         PickNewTarget();
+        rotationSpeed = new Vector3(Random.Range(1f, 4f), Random.Range(1f, 8f), Random.Range(0.5f, 2f));
     }
 
     void Update()
