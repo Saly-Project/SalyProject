@@ -119,63 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &21830243
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -73.65891
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.3467324
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -22.029768
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5677862300504436789, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_Name
-      value: Shield Recharge (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
 --- !u!1 &168033012
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +292,63 @@ Transform:
   - {fileID: 508908548}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &247089003
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7389053645423544726, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_Name
+      value: Skill Recharge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -84.9167
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.494181
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.882504
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
 --- !u!1 &273049313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 426513850523608982, guid: 200796a576a0b9d4d904a21f3f1ec088, type: 3}
@@ -402,6 +402,120 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.38
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &407497859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7389053645423544726, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_Name
+      value: Skill Recharge (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -74.321175
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.054787
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 59.54958
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+--- !u!1001 &423938635
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7389053645423544726, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_Name
+      value: Skill Recharge (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -46.870354
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.630666
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -43.958973
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
 --- !u!1001 &499478973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -764,6 +878,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -29.698, z: 0}
+--- !u!1001 &1132947538
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7389053645423544726, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_Name
+      value: Skill Recharge (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -76.42356
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.529748
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.773571
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
 --- !u!1 &1158694559
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,120 +1092,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9138043085225011931, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
   m_PrefabInstance: {fileID: 3516210795872562695}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1631000805
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -82.46094
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.2936358
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.9016714
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5677862300504436789, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_Name
-      value: Shield Recharge
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
---- !u!1001 &1691520616
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -76.11294
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.558027
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.0217
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844480068226731526, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5677862300504436789, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
-      propertyPath: m_Name
-      value: Shield Recharge (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
 --- !u!1 &1790505820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,6 +2934,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c699064ccb83c64099f9799301fa45a, type: 3}
+--- !u!1001 &8496895672901051001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7389053645423544726, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_Name
+      value: Skill Recharge
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803876134592498149, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31690c042b6d2c74d9ab82392929ae18, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2892,7 +3006,9 @@ SceneRoots:
   - {fileID: 239713445}
   - {fileID: 209191859}
   - {fileID: 1527109930}
-  - {fileID: 1631000805}
-  - {fileID: 1691520616}
-  - {fileID: 21830243}
   - {fileID: 1790505824}
+  - {fileID: 8496895672901051001}
+  - {fileID: 247089003}
+  - {fileID: 1132947538}
+  - {fileID: 423938635}
+  - {fileID: 407497859}

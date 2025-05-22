@@ -66,7 +66,7 @@ public class ForceField : MonoBehaviour
             if (!Charged)
             {
                 Charged = true;
-                Destroy(other.gameObject);
+                Destroy(other);
                 UIshield.SetActive(true);
                 var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity) as GameObject;
                 Destroy(recharge, 2f);

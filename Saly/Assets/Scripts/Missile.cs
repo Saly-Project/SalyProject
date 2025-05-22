@@ -37,8 +37,8 @@ public class Missile : MonoBehaviour
     void DestroyMissile()
     {
         Destroy(gameObject);
-        var recharge = Instantiate(ExplosionVFX, transform.position, Quaternion.identity) as GameObject;
-        Destroy(recharge, 2f);
+        var explosion = Instantiate(ExplosionVFX, transform.position, Quaternion.identity) as GameObject;
+        Destroy(explosion, 2f);
     }
 
     void OnCollisionEnter(Collision collision)
