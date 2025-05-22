@@ -2998,7 +2998,6 @@ GameObject:
   - component: {fileID: -575212599671118019}
   - component: {fileID: 9173964662824358329}
   - component: {fileID: 9157030301239900377}
-  - component: {fileID: 5918808497096985712}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -3239,23 +3238,6 @@ MonoBehaviour:
   indicatorUI: {fileID: 4668932163784422394}
   screenEdgeBuffer: 50
   manager: {fileID: 4377179817373442327, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
---- !u!114 &5918808497096985712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5516439818402100184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d366eaec863b73641934166faf600be2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Charged: 1
-  Duration: 6
-  Shield: {fileID: 0}
-  UIshield: {fileID: 0}
-  RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
 --- !u!1 &5561553328476923580
 GameObject:
   m_ObjectHideFlags: 0

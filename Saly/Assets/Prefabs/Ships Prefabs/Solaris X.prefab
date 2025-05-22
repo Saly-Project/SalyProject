@@ -332,6 +332,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solaris X
       objectReference: {fileID: 0}
+    - target: {fileID: 2850296069838715382, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.235
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850296069838715382, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850296069838715382, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5481511871572575658, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -388,6 +400,18 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3218230495
       objectReference: {fileID: 0}
+    - target: {fileID: 8813770219011209700, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.235
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813770219011209700, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813770219011209700, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2587740899147869764, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
@@ -401,7 +425,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3421592465424318234, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4700523964232726669}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5516439818402100184, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359524997433465193}
   m_SourcePrefab: {fileID: 100100000, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
 --- !u!224 &2762950131588838415 stripped
 RectTransform:
@@ -413,6 +440,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5481511871572575658, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
   m_PrefabInstance: {fileID: 660912838373296917}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5017674571320473805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5516439818402100184, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+  m_PrefabInstance: {fileID: 660912838373296917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &359524997433465193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5017674571320473805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d366eaec863b73641934166faf600be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Charged: 1
+  Duration: 6
+  Shield: {fileID: 4268593527327067520}
+  UIshield: {fileID: 4097445482348244958}
+  RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
 --- !u!4 &5388471116630424434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4894209207333105767, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
