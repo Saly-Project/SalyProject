@@ -6,6 +6,7 @@ using TMPro;
 using System;
 using UnityEngine.UI;
 using Unity.Netcode;
+using UnityEngine.SceneManagement;
 
 public class ShipController : NetworkBehaviour
 {
@@ -121,7 +122,10 @@ public class ShipController : NetworkBehaviour
 
 
 
-    
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
     
     void MouseSteer()
