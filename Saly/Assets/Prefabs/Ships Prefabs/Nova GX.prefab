@@ -331,9 +331,11 @@ MonoBehaviour:
   Charged: 1
   UIskill: {fileID: 2433499870451825400}
   ShockwavePrefab: {fileID: 581127037844900974, guid: db6cb2496449988448bf30744b7e3d6c, type: 3}
-  Duration: 5
-  Size: 300
+  Duration: 3
+  Size: 500
   RechargeVFX: {fileID: 3248635198738779518, guid: 5eab874f66f387e41bd3de341c2a0a88, type: 3}
+  SlowValue: 30
+  SlowDuration: 4
 --- !u!4 &8036811853028279440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4894209207333105767, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}

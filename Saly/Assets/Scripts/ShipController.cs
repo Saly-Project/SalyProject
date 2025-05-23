@@ -70,8 +70,9 @@ public class ShipController : NetworkBehaviour
     public CheckpointManager checkpointManager;
     public CheckpointIndicator indicator;
 
-
-   
+    private bool IsSlowed = false;
+    private float SlowTimer = 0;
+    private float maxSpeed = float.MaxValue;
 
 
     public override void OnNetworkSpawn()
@@ -236,15 +237,42 @@ public class ShipController : NetworkBehaviour
         else
             activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, MoveVertical * forwardSpeed, forwardAcceleration * Time.deltaTime);
         
+        if (activeForwardSpeed > maxSpeed)
+        {
+            activeForwardSpeed = maxSpeed;
+        }
+        else if (activeForwardSpeed < -maxSpeed)
+        {
+            activeForwardSpeed = -maxSpeed;
+        }
 
-        transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
+            transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
         transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
     }
 
-    
+
+    public void Slow(float value, float duration)
+    {
+        IsSlowed = true;
+        SlowTimer = duration;
+        maxSpeed = value;
+    }
+
+    private void Update()
+    {
+        if (IsSlowed)
+        {
+            SlowTimer -= Time.deltaTime;
+
+            if (SlowTimer < 0)
+            {
+                IsSlowed = false;
+                maxSpeed = float.MaxValue;
+            }
+        }
+    }
 
 
-    
     private float rotationLerpSpeed = 0f;
     private void FixedUpdate(){
 
