@@ -10,7 +10,10 @@ using Unity.Netcode;
 public class ShipController : NetworkBehaviour
 {
 
-   
+    // sound FX 
+    [SerializeField] public float FXVolume;
+    [SerializeField] private AudioClip boostFX;
+    
     
 
     // smoother camera control
@@ -296,16 +299,19 @@ public class ShipController : NetworkBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift)){
                 
-                forwardSpeed += 20;
-            } 
+                if (Stamina > 15) forwardSpeed += 20;
+            }
 
-            if (Input.GetButton("Boost")){
+            if (Input.GetButton("Boost"))
+            {
                 Stamina -= StaminaDecrement * Time.deltaTime;
                 if (Stamina < 0) Stamina = 0;
                 StaminaBar.fillAmount = Stamina / MaxStamina;
 
                 if (rechargeStamina != null) StopCoroutine(rechargeStamina);
                 rechargeStamina = StartCoroutine(RechargeStamina());
+                
+                
             }
 
 
@@ -335,13 +341,16 @@ public class ShipController : NetworkBehaviour
     {
         if (other.CompareTag("Boost Ring")) //going through boost ring
         {
-            if (activeForwardSpeed > 0){
+            if (activeForwardSpeed > 0)
+            {
 
 
-                var impact = Instantiate (BoostWave, other.transform.position, Quaternion.identity) as GameObject;
+                var impact = Instantiate(BoostWave, other.transform.position, Quaternion.identity) as GameObject;
+                AudioSource.PlayClipAtPoint(boostFX, transform.position, 1f);
                 rb.AddForce(transform.forward * 5000f, ForceMode.Impulse);
                 activeForwardSpeed += 10f;
                 Destroy(impact, 2f);
+
                 
             }
         }
@@ -349,14 +358,16 @@ public class ShipController : NetworkBehaviour
         if (other.CompareTag("Boost Recharge")) //taking boosts on the map
         {
             Stamina += 25f;
-                if (Stamina > MaxStamina) Stamina = MaxStamina;
-                StaminaBar.fillAmount = Stamina / MaxStamina;
-                Destroy(other.gameObject);
-                var recharge = Instantiate (RechargeVFX, other.transform.position, Quaternion.identity) as GameObject;
-                Destroy(recharge, 2f);
-                
-            
+            if (Stamina > MaxStamina) Stamina = MaxStamina;
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+            Destroy(other.gameObject);
+            var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity) as GameObject;
+            Destroy(recharge, 2f);
+
+
         }
+
+        
 
         
     }
