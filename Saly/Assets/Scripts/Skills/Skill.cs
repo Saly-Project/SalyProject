@@ -3,15 +3,11 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     public bool Charged;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public GameObject UIskill;
 
-    // Update is called once per frame
-    void Update()
+    public void Disable()
     {
-        
+        Charged = false;
+        UIskill.SetActive(false);
     }
 }

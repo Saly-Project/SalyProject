@@ -334,11 +334,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Charged: 1
+  UIskill: {fileID: 7740726224364125728}
   searchRadius: 300
   firePoint: {fileID: 1001219303098957914}
   missilePrefab: {fileID: 3324629323341455422, guid: f5db44c55a3cb73439441bb8358b963f, type: 3}
-  UImissile: {fileID: 7740726224364125728}
-  RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
+  RechargeVFX: {fileID: 3248635198738779518, guid: 5eab874f66f387e41bd3de341c2a0a88, type: 3}
 --- !u!4 &7602353100419942859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4894209207333105767, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}

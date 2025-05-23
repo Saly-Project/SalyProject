@@ -422,11 +422,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Charged: 1
+  UIskill: {fileID: 5455470742036037758}
   ShockwavePrefab: {fileID: 581127037844900974, guid: fb9153dee59d78d4bb0546f09881ead1, type: 3}
   Duration: 5
   Size: 300
-  UIskill: {fileID: 5455470742036037758}
-  RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
+  RechargeVFX: {fileID: 3248635198738779518, guid: 5eab874f66f387e41bd3de341c2a0a88, type: 3}
 --- !u!224 &7789314563691060973 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3421592465424318234, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}

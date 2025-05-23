@@ -1,12 +1,10 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class ForceField : MonoBehaviour
+public class ForceField : Skill
 {
-    public bool Charged;
     public float Duration;
     public GameObject Shield;
-    public GameObject UIskill;
     public GameObject RechargeVFX;
 
     bool IsActive = false;
@@ -15,7 +13,6 @@ public class ForceField : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Instantiate(Shield);
         UIskill.SetActive(Charged);
         Shield.SetActive(IsActive);
     }

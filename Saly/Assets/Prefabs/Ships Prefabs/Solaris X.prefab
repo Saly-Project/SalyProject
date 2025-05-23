@@ -230,7 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5880413654064273521
 Transform:
   m_ObjectHideFlags: 0
@@ -459,10 +459,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Charged: 1
+  UIskill: {fileID: 4097445482348244958}
   Duration: 6
   Shield: {fileID: 4268593527327067520}
-  UIshield: {fileID: 4097445482348244958}
-  RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
+  RechargeVFX: {fileID: 3248635198738779518, guid: 5eab874f66f387e41bd3de341c2a0a88, type: 3}
 --- !u!4 &5388471116630424434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4894209207333105767, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}

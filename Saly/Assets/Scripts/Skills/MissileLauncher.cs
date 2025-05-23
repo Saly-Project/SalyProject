@@ -3,15 +3,13 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
-public class MissileLauncher : MonoBehaviour
+public class MissileLauncher : Skill
 {
-    public bool Charged;
     public float searchRadius;
 
     public Transform firePoint;
 
     public GameObject missilePrefab;
-    public GameObject UIskill;
     public GameObject RechargeVFX;
 
     private void Start()

@@ -1,12 +1,10 @@
 using UnityEngine;
 
-public class ElectricShockwave : MonoBehaviour
+public class ElectricShockwave : Skill
 {
-    public bool Charged;
     public GameObject ShockwavePrefab;
     public float Duration;
     public float Size;
-    public GameObject UIskill;
     public GameObject RechargeVFX;
 
     private bool IsActive = false;
@@ -24,9 +22,10 @@ public class ElectricShockwave : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Charged) // if the skill can be enabled
+            if (Charged && !IsActive) // if the skill can be enabled
             {
                 IsActive = true;
+                Hypocenter = transform.position;
                 SpawnShockwave();
             }
         }
@@ -46,10 +45,10 @@ public class ElectricShockwave : MonoBehaviour
                 {
                     if (enemy != gameObject)
                     {
-                        float dist = Vector3.Distance(Hypocenter, enemy.transform.position);
+                        var dist = Vector3.Distance(Hypocenter, enemy.transform.position);
                         if (dist <= Size) 
                         {
-                            enemy.GetComponent<Skill>().Charged = false;
+                            enemy.GetComponent<Skill>().Disable();
                         }
                     }
                 }
@@ -59,9 +58,8 @@ public class ElectricShockwave : MonoBehaviour
 
     void SpawnShockwave()
     {
-        //Charged = false;
-        //UIskill.SetActive(false);
-        Hypocenter = gameObject.transform.position;
+        Charged = false;
+        UIskill.SetActive(false);
         GameObject Shockwave = Instantiate(ShockwavePrefab, Hypocenter, Quaternion.identity) as GameObject;
         ParticleSystem ShockwavePS = Shockwave.transform.GetChild(0).GetComponent<ParticleSystem>();
 
