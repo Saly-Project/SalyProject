@@ -1,63 +1,47 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class ForceField : MonoBehaviour
+public class ElectricShockwave : MonoBehaviour
 {
     public bool Charged;
+    public GameObject ShockwavePrefab;
     public float Duration;
-    public GameObject Shield;
+    public float Size;
     public GameObject UIskill;
     public GameObject RechargeVFX;
-
-    bool IsActive = false;
-    float ShieldClock = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Instantiate(Shield);
         UIskill.SetActive(Charged);
-        Shield.SetActive(IsActive);
-    }
-
-    void ActivateShield()
-    {
-        IsActive = true;
-        Charged = false;
-        ShieldClock = Duration;
-        Shield.SetActive(true);
-        UIskill.SetActive(false);
-    }
-
-    void DesactivateShield()
-    {
-        IsActive = false;
-        Shield.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Shield.transform.position = this.transform.position; // the shield follows the player's position
-
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (Charged) // if the skill can be enabled
             {
-                ActivateShield();
-            }
-        }
-
-        if (IsActive)
-        {
-            ShieldClock -= Time.deltaTime;
-
-            if (ShieldClock <= 0)
-            {
-                DesactivateShield();
+                SpawnShockwave();
             }
         }
     }
+
+    void SpawnShockwave()
+    {
+        GameObject Shockwave = Instantiate(ShockwavePrefab, gameObject.transform.position, Quaternion.identity) as GameObject;
+        ParticleSystem ShockwavePS = Shockwave.transform.GetChild(0).GetComponent<ParticleSystem>();
+
+        if (ShockwavePS != null)
+        { 
+            var main = ShockwavePS.main;
+            main.startLifetime = Duration;
+            main.startSize = Size;
+        }
+
+        Destroy(Shockwave, Duration + 1);
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {

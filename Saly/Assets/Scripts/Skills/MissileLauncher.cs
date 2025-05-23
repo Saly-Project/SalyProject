@@ -11,12 +11,12 @@ public class MissileLauncher : MonoBehaviour
     public Transform firePoint;
 
     public GameObject missilePrefab;
-    public GameObject UImissile;
+    public GameObject UIskill;
     public GameObject RechargeVFX;
 
     private void Start()
     {
-        UImissile.SetActive(Charged);
+        UIskill.SetActive(Charged);
     }
 
     void LauchMissile()
@@ -41,7 +41,7 @@ public class MissileLauncher : MonoBehaviour
         if (nearestEnemy != null && shortestDistance <= searchRadius)
         {
             Charged = false;
-            UImissile.SetActive(false);
+            UIskill.SetActive(false);
             GameObject missile = Instantiate(missilePrefab, firePoint.position, firePoint.rotation);
             missile.SendMessage("SetTarget", nearestEnemy);
         }
@@ -71,7 +71,7 @@ public class MissileLauncher : MonoBehaviour
             {
                 Charged = true;
                 Destroy(other.gameObject);
-                UImissile.SetActive(true);
+                UIskill.SetActive(true);
                 var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity) as GameObject;
                 Destroy(recharge, 2f);
             }
