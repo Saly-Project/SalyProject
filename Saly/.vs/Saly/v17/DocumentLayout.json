@@ -1,34 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\",
+  "WorkspaceRootPath": "C:\\Users\\Anis\\OneDrive\\Bureau\\Documents\\GitHub\\SalyProject\\Saly\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|c:\\users\\cooler master\\documents\\epita\\salyproject\\saly\\assets\\scripts\\skills\\shield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\shield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|c:\\users\\anis\\onedrive\\bureau\\documents\\github\\salyproject\\saly\\assets\\scripts\\playernetwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playernetwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\slowshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\slowshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Anis\\OneDrive\\Bureau\\Documents\\GitHub\\SalyProject\\Saly\\assets\\scripts\\networkbootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\networkbootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\missile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\missile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\missilelauncher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\missilelauncher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\asteroidspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\asteroidspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Anis\\OneDrive\\Bureau\\Documents\\GitHub\\SalyProject\\Saly\\assets\\scripts\\ui\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,92 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AsteroidSpawner.cs",
-              "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\AsteroidSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AsteroidSpawner.cs",
-              "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\AsteroidSpawner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AsteroidSpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T16:41:42.115Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SlowShockwave.cs",
-              "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\SlowShockwave.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\SlowShockwave.cs",
-              "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\SlowShockwave.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Skills\\SlowShockwave.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T15:17:23.161Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ElectricShockwave.cs",
-              "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\ElectricShockwave.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\ElectricShockwave.cs",
-              "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\ElectricShockwave.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Skills\\ElectricShockwave.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Title": "RoomManager.cs",
+              "DocumentMoniker": "C:\\Users\\Anis\\OneDrive\\Bureau\\Documents\\GitHub\\SalyProject\\Saly\\Assets\\Scripts\\UI\\RoomManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\RoomManager.cs",
+              "ToolTip": "C:\\Users\\Anis\\OneDrive\\Bureau\\Documents\\GitHub\\SalyProject\\Saly\\Assets\\Scripts\\UI\\RoomManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\RoomManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T09:56:42.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Skill.cs",
-              "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\Skill.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\Skill.cs",
-              "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\Skill.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Skills\\Skill.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T09:35:50.143Z"
+              "WhenOpened": "2025-05-23T20:33:55.722Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Shield.cs",
-              "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\Shield.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\Shield.cs",
-              "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\Shield.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Skills\\Shield.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA9wCUAAAAIAAAAAAAAAA==",
+              "Title": "PlayerNetwork.cs",
+              "DocumentMoniker": "C:\\Users\\Anis\\OneDrive\\Bureau\\Documents\\GitHub\\SalyProject\\Saly\\Assets\\Scripts\\PlayerNetwork.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerNetwork.cs",
+              "ToolTip": "C:\\Users\\Anis\\OneDrive\\Bureau\\Documents\\GitHub\\SalyProject\\Saly\\Assets\\Scripts\\PlayerNetwork.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerNetwork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T09:12:30.347Z",
+              "WhenOpened": "2025-05-23T20:20:30.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Missile.cs",
-              "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\Missile.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\Missile.cs",
-              "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\Missile.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Skills\\Missile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "NetworkBootstrapper.cs",
+              "DocumentMoniker": "C:\\Users\\Anis\\OneDrive\\Bureau\\Documents\\GitHub\\SalyProject\\Saly\\Assets\\Scripts\\NetworkBootstrapper.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NetworkBootstrapper.cs",
+              "ToolTip": "C:\\Users\\Anis\\OneDrive\\Bureau\\Documents\\GitHub\\SalyProject\\Saly\\Assets\\Scripts\\NetworkBootstrapper.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NetworkBootstrapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T09:13:26.831Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MissileLauncher.cs",
-              "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\MissileLauncher.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\MissileLauncher.cs",
-              "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\MissileLauncher.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Skills\\MissileLauncher.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwAsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T09:13:27.557Z"
+              "WhenOpened": "2025-05-23T20:20:09.855Z"
             }
           ]
         }
