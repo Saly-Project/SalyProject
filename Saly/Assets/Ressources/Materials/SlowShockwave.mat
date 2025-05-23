@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SlowShockwave
-  m_Shader: {fileID: -6465566751694194690, guid: ec1c991a08967e14089e6f5a87becc55, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9888772f86d6c3b4c93c842eb28379fd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -57,10 +57,10 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _IntersectionColor: {r: 6.775679, g: 2.8734558, b: 0, a: 1}
+    - _IntersectionColor: {r: 27.742702, g: 20.161001, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &7317212169812044171
+--- !u!114 &9198850124523296327
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

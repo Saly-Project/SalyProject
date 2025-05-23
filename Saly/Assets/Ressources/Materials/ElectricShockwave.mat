@@ -23,7 +23,6 @@ Material:
   disabledShaderPasses:
   - DepthOnly
   - MOTIONVECTORS
-  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -45,11 +44,11 @@ Material:
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
-    - _CastShadows: 0
+    - _CastShadows: 1
     - _Cull: 0
     - _DstBlend: 10
-    - _Fill: 0.005
-    - _IntersectionDepth: 3
+    - _Fill: 0.002
+    - _IntersectionDepth: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
@@ -58,7 +57,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _IntersectionColor: {r: 13.238508, g: 9.003671, b: 0.4851811, a: 1}
+    - _IntersectionColor: {r: 0, g: 62.097855, b: 107.47167, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &1959850871981664282
