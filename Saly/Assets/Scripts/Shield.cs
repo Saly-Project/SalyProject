@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Shield : MonoBehaviour
@@ -9,7 +10,7 @@ public class Shield : MonoBehaviour
     public GameObject RechargeVFX;
 
     bool IsActive = false;
-    float ShieldChrono = 0;
+    float ShieldClock = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,14 +22,11 @@ public class Shield : MonoBehaviour
 
     void ActivateShield()
     {
-        if (Charged) // if the skill can be enabled
-        {
-            IsActive = true;
-            Charged = false;
-            ShieldChrono = Duration;
-            ObjShield.SetActive(true);
-            UIshield.SetActive(false);
-        }
+        IsActive = true;
+        Charged = false;
+        ShieldClock = Duration;
+        Shield.SetActive(true);
+        UIshield.SetActive(false);
     }
 
     void DesactivateShield()
@@ -44,14 +42,17 @@ public class Shield : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            ActivateShield();
+            if (Charged) // if the skill can be enabled
+            {
+                ActivateShield();
+            }
         }
 
         if (IsActive)
         {
-            ShieldChrono -= Time.deltaTime;
+            ShieldClock -= Time.deltaTime;
 
-            if (ShieldChrono <= 0)
+            if (ShieldClock <= 0)
             {
                 DesactivateShield();
             }
@@ -60,12 +61,12 @@ public class Shield : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Shield Recharge"))
+        if (other.CompareTag("Skill Recharge"))
         {
             if (!Charged)
             {
                 Charged = true;
-                Destroy(other.gameObject);
+                Destroy(other);
                 UIshield.SetActive(true);
                 var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity) as GameObject;
                 Destroy(recharge, 2f);

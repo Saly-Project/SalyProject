@@ -16,6 +16,9 @@ TagManager:
   - Shield
   - AI
   - Shield Recharge
+  - Shield
+  - Enemy
+  - Skill Recharge
   layers:
   - Default
   - TransparentFX

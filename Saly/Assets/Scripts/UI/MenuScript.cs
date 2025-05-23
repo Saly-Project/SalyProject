@@ -6,9 +6,10 @@ public class MenuScript : MonoBehaviour
 
 {
 
-    public GameObject SettingsMenuUI;
     public GameObject MainMenuUI;
     public GameObject LobbyMenuUI;
+    public GameObject SpaceshipMenuUI;
+    public GameObject SettingsMenuUI;
 
     [SerializeField] GameObject CreateButton;
     [SerializeField] GameObject RoomCreation;
@@ -32,8 +33,6 @@ public class MenuScript : MonoBehaviour
     public void BackToMain()
     {
         MainMenuUI.SetActive(true);
-        SettingsMenuUI.SetActive(false);
-        LobbyMenuUI.SetActive(false);
     }
 
 
@@ -43,11 +42,31 @@ public class MenuScript : MonoBehaviour
         LobbyMenuUI.SetActive(true);
     }
 
-    void Start()
+    public void Spaceship()
     {
+        MainMenuUI.SetActive(false);
+        SpaceshipMenuUI.SetActive(true);
+    }
+
+    public void Settings()
+    {
+        MainMenuUI.SetActive(false);
+        SettingsMenuUI.SetActive(true);
+    }
+
+
+    // Back to main button (does work for all menu UI) 
+    public void BackToMain()
+    {
+        PlayerPrefs.Save();
+        LobbyMenuUI.SetActive(false);
+        SpaceshipMenuUI.SetActive(false);
+        SettingsMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
     }
 
+
+    // Host Buttons
     public void StartHost()
     {
         MainMenuUI.SetActive(false);
@@ -61,8 +80,7 @@ public class MenuScript : MonoBehaviour
     }
 
 
-    // map select
-
+    // Map selection
     public void HyperlaneNext()
     {
         Hyperlane.SetActive(false);
