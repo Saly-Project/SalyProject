@@ -6,10 +6,9 @@ public class MenuScript : MonoBehaviour
 
 {
 
+    public GameObject SettingsMenuUI;
     public GameObject MainMenuUI;
     public GameObject LobbyMenuUI;
-    public GameObject SpaceshipMenuUI;
-    public GameObject SettingsMenuUI;
 
     [SerializeField] GameObject CreateButton;
     [SerializeField] GameObject RoomCreation;
@@ -21,45 +20,34 @@ public class MenuScript : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI soloModeButtonText; // Assign the button's TextMeshPro component in the Inspector
 
-    // Start Main Menu automaticaly
-    void Start()
+
+
+    public void Settings()
+    {
+        MainMenuUI.SetActive(false);
+        SettingsMenuUI.SetActive(true);
+
+    }
+
+    public void BackToMain()
     {
         MainMenuUI.SetActive(true);
+        SettingsMenuUI.SetActive(false);
+        LobbyMenuUI.SetActive(false);
     }
 
 
-    // Main menu buttons
     public void Play()
     {
         MainMenuUI.SetActive(false);
         LobbyMenuUI.SetActive(true);
     }
 
-    public void Spaceship()
+    void Start()
     {
-        MainMenuUI.SetActive(false);
-        SpaceshipMenuUI.SetActive(true);
-    }
-
-    public void Settings()
-    {
-        MainMenuUI.SetActive(false);
-        SettingsMenuUI.SetActive(true);
-    }
-
-
-    // Back to main button (does work for all menu UI) 
-    public void BackToMain()
-    {
-        PlayerPrefs.Save();
-        LobbyMenuUI.SetActive(false);
-        SpaceshipMenuUI.SetActive(false);
-        SettingsMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
     }
 
-
-    // Host Buttons
     public void StartHost()
     {
         MainMenuUI.SetActive(false);
@@ -73,7 +61,8 @@ public class MenuScript : MonoBehaviour
     }
 
 
-    // Map selection
+    // map select
+
     public void HyperlaneNext()
     {
         Hyperlane.SetActive(false);

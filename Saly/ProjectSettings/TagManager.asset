@@ -17,6 +17,7 @@ TagManager:
   - Skill Recharge
   - CheckpointParent
   - AI
+  - Shield Recharge
   layers:
   - Default
   - TransparentFX
