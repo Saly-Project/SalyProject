@@ -30,11 +30,6 @@ public class MenuScript : MonoBehaviour
 
     }
 
-    public void BackToMain()
-    {
-        MainMenuUI.SetActive(true);
-    }
-
 
     public void Play()
     {
@@ -46,12 +41,6 @@ public class MenuScript : MonoBehaviour
     {
         MainMenuUI.SetActive(false);
         SpaceshipMenuUI.SetActive(true);
-    }
-
-    public void Settings()
-    {
-        MainMenuUI.SetActive(false);
-        SettingsMenuUI.SetActive(true);
     }
 
 

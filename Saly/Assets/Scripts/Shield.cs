@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
@@ -25,7 +26,7 @@ public class Shield : MonoBehaviour
         IsActive = true;
         Charged = false;
         ShieldClock = Duration;
-        Shield.SetActive(true);
+        ObjShield.SetActive(true);
         UIshield.SetActive(false);
     }
 
