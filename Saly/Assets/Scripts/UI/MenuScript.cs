@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro; // Add this for TextMeshPro
 
+
 public class MenuScript : MonoBehaviour
 
 {
@@ -10,6 +11,8 @@ public class MenuScript : MonoBehaviour
     public GameObject LobbyMenuUI;
     public GameObject SpaceshipMenuUI;
     public GameObject SettingsMenuUI;
+    public GameObject mainMenu;
+    public GameObject usernameMenu;
 
     [SerializeField] GameObject CreateButton;
     [SerializeField] GameObject RoomCreation;
@@ -119,7 +122,7 @@ public class MenuScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
     }
-    
+
     public static bool isSoloMode = false;
 
     public void ToggleSoloMode()
@@ -132,6 +135,12 @@ public class MenuScript : MonoBehaviour
         {
             soloModeButtonText.text = isSoloMode ? "Solo : YES" : "Solo : NO";
         }
+    }
+
+    public void GoToUsernameMenu()
+    {
+        mainMenu.SetActive(false);
+        usernameMenu.SetActive(true);
     }
 
 }
