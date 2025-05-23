@@ -6,6 +6,7 @@ public class Projectile : NetworkBehaviour
 
     public GameObject impactVFX;
     private bool collided;
+    [SerializeField] private AudioClip impactFX;
 
 
 
@@ -22,6 +23,7 @@ public class Projectile : NetworkBehaviour
             var impact = Instantiate ( impactVFX, co.contacts[0].point, Quaternion.identity) as GameObject;
             Destroy(impact, 0.5f);
             collided = true;
+            AudioSource.PlayClipAtPoint(impactFX, co.transform.position, 5f);
             Destroy(gameObject);
         }
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // Add this for TextMeshPro
 
 public class MenuScript : MonoBehaviour
 
@@ -17,6 +18,8 @@ public class MenuScript : MonoBehaviour
     [SerializeField] GameObject Warpway;
     [SerializeField] GameObject Oblivion;
     [SerializeField] GameObject Random;
+
+    [SerializeField] private TextMeshProUGUI soloModeButtonText; // Assign the button's TextMeshPro component in the Inspector
 
 
     // Start Main Menu automaticaly
@@ -116,6 +119,19 @@ public class MenuScript : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
-
     
+    public static bool isSoloMode = false;
+
+    public void ToggleSoloMode()
+    {
+        isSoloMode = !isSoloMode; // Toggle the value of isSoloMode
+        Debug.Log("Solo Mode: " + isSoloMode);
+
+        // Update the button text
+        if (soloModeButtonText != null)
+        {
+            soloModeButtonText.text = isSoloMode ? "Solo : YES" : "Solo : NO";
+        }
+    }
+
 }

@@ -1,11 +1,11 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class ForceField : MonoBehaviour
+public class Shield : MonoBehaviour
 {
     public bool Charged;
     public float Duration;
-    public GameObject Shield;
+    public GameObject ObjShield;
     public GameObject UIshield;
     public GameObject RechargeVFX;
 
@@ -15,9 +15,9 @@ public class ForceField : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Instantiate(Shield);
+        Instantiate(ObjShield);
         UIshield.SetActive(Charged);
-        Shield.SetActive(IsActive);
+        ObjShield.SetActive(IsActive);
     }
 
     void ActivateShield()
@@ -32,13 +32,13 @@ public class ForceField : MonoBehaviour
     void DesactivateShield()
     {
         IsActive = false;
-        Shield.SetActive(false);
+        ObjShield.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Shield.transform.position = this.transform.position; // the shield follows the player's position
+        ObjShield.transform.position = this.transform.position; // the shield follows the player's position
 
         if (Input.GetKeyDown(KeyCode.E))
         {

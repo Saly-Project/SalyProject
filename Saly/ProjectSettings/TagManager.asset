@@ -12,6 +12,8 @@ TagManager:
   - Boost Ring
   - Boost Recharge
   - Checkpoint
+  - CheckpointParent
+  - AI
   - Shield Recharge
   - Shield
   - Enemy
