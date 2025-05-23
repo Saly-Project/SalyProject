@@ -261,8 +261,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 841.0,
-            "y": -202.00001525878907
+            "x": 842.0000610351563,
+            "y": -202.00003051757813
         },
         "m_Blocks": [
             {
@@ -1047,7 +1047,7 @@
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_RenderFace": 2,
+    "m_RenderFace": 0,
     "m_AlphaClip": false,
     "m_CastShadows": true,
     "m_ReceiveShadows": true,

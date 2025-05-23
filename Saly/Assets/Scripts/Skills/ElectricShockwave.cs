@@ -29,6 +29,8 @@ public class ElectricShockwave : MonoBehaviour
 
     void SpawnShockwave()
     {
+        //Charged = false;
+        //UIskill.SetActive(false);
         GameObject Shockwave = Instantiate(ShockwavePrefab, gameObject.transform.position, Quaternion.identity) as GameObject;
         ParticleSystem ShockwavePS = Shockwave.transform.GetChild(0).GetComponent<ParticleSystem>();
 
