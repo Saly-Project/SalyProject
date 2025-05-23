@@ -9,6 +9,10 @@ public class ElectricShockwave : MonoBehaviour
     public GameObject UIskill;
     public GameObject RechargeVFX;
 
+    private bool IsActive = false;
+    private float ShockwaveClock = 0;
+    private Vector3 Hypocenter;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +26,33 @@ public class ElectricShockwave : MonoBehaviour
         {
             if (Charged) // if the skill can be enabled
             {
+                IsActive = true;
                 SpawnShockwave();
+            }
+        }
+
+        if (IsActive) 
+        { 
+            ShockwaveClock += Time.deltaTime;
+
+            if (ShockwaveClock > Duration) 
+            {
+                IsActive = false;
+                ShockwaveClock = 0;
+
+                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Player");
+
+                foreach (GameObject enemy in enemies)
+                {
+                    if (enemy != gameObject)
+                    {
+                        float dist = Vector3.Distance(Hypocenter, enemy.transform.position);
+                        if (dist <= Size) 
+                        {
+                            enemy.GetComponent<Skill>().Charged = false;
+                        }
+                    }
+                }
             }
         }
     }
@@ -31,7 +61,8 @@ public class ElectricShockwave : MonoBehaviour
     {
         //Charged = false;
         //UIskill.SetActive(false);
-        GameObject Shockwave = Instantiate(ShockwavePrefab, gameObject.transform.position, Quaternion.identity) as GameObject;
+        Hypocenter = gameObject.transform.position;
+        GameObject Shockwave = Instantiate(ShockwavePrefab, Hypocenter, Quaternion.identity) as GameObject;
         ParticleSystem ShockwavePS = Shockwave.transform.GetChild(0).GetComponent<ParticleSystem>();
 
         if (ShockwavePS != null)
