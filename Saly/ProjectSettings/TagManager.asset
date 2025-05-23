@@ -12,10 +12,11 @@ TagManager:
   - Boost Ring
   - Boost Recharge
   - Checkpoint
-  - Shield Recharge
   - Shield
   - Enemy
   - Skill Recharge
+  - CheckpointParent
+  - AI
   layers:
   - Default
   - TransparentFX

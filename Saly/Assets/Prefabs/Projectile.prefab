@@ -409,7 +409,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!114 &7255760293516613274
@@ -451,6 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   impactVFX: {fileID: 362261158077530393, guid: 20fda529c996a334da7fd65b48ea40df, type: 3}
+  impactFX: {fileID: 8300000, guid: 8dac24aaa47b2774aacf9b31ca6379f3, type: 3}
 --- !u!114 &-8323619209167954562
 MonoBehaviour:
   m_ObjectHideFlags: 0

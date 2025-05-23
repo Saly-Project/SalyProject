@@ -29,13 +29,13 @@ public class ForceField : Skill
     void DesactivateShield()
     {
         IsActive = false;
-        Shield.SetActive(false);
+        ObjShield.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Shield.transform.position = this.transform.position; // the shield follows the player's position
+        ObjShield.transform.position = this.transform.position; // the shield follows the player's position
 
         if (Input.GetKeyDown(KeyCode.E))
         {
