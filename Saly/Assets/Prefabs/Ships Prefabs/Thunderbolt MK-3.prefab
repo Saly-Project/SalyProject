@@ -424,8 +424,8 @@ MonoBehaviour:
   Charged: 1
   UIskill: {fileID: 5455470742036037758}
   ShockwavePrefab: {fileID: 581127037844900974, guid: fb9153dee59d78d4bb0546f09881ead1, type: 3}
-  Duration: 5
-  Size: 300
+  Duration: 3
+  Size: 500
   RechargeVFX: {fileID: 3248635198738779518, guid: 5eab874f66f387e41bd3de341c2a0a88, type: 3}
 --- !u!224 &7789314563691060973 stripped
 RectTransform:
