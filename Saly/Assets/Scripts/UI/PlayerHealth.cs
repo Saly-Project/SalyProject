@@ -3,12 +3,11 @@ using Unity.Netcode;
 using Unity.Multiplayer.Center.Common;
 using UnityEngine.UI;
 using System.Collections;
-using System;
 
 public class PlayerHealth : NetworkBehaviour
 {
-    public float maxHealth = 100;
-    private float _Health;
+    [SerializeField] public float maxHealth = 100;
+    [SerializeField] private float _Health;
 
     // UI and recharge
     public Image HealthBar;
@@ -70,10 +69,4 @@ public class PlayerHealth : NetworkBehaviour
         
     }
 
-    public void TakeDamage(float amount)
-    {
-        _Health -= amount;
-        Debug.Log(gameObject.name + " perd " + amount + " PV");
-        if (_Health <= 0) Destroy(gameObject);
-    }
 }
