@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // Add this for TextMeshPro
 
 public class MenuScript : MonoBehaviour
 
@@ -17,22 +18,27 @@ public class MenuScript : MonoBehaviour
     [SerializeField] GameObject Oblivion;
     [SerializeField] GameObject Random;
 
+    [SerializeField] private TextMeshProUGUI soloModeButtonText; // Assign the button's TextMeshPro component in the Inspector
 
 
-    public void Settings(){
+
+    public void Settings()
+    {
         MainMenuUI.SetActive(false);
         SettingsMenuUI.SetActive(true);
 
     }
 
-    public void BackToMain(){
+    public void BackToMain()
+    {
         MainMenuUI.SetActive(true);
         SettingsMenuUI.SetActive(false);
         LobbyMenuUI.SetActive(false);
     }
 
 
-    public void Play(){
+    public void Play()
+    {
         MainMenuUI.SetActive(false);
         LobbyMenuUI.SetActive(true);
     }
@@ -100,8 +106,21 @@ public class MenuScript : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+    }
     
+    public static bool isSoloMode = false;
+
+    public void ToggleSoloMode()
+    {
+        isSoloMode = !isSoloMode; // Toggle the value of isSoloMode
+        Debug.Log("Solo Mode: " + isSoloMode);
+
+        // Update the button text
+        if (soloModeButtonText != null)
+        {
+            soloModeButtonText.text = isSoloMode ? "Solo : YES" : "Solo : NO";
+        }
     }
 
-    
 }

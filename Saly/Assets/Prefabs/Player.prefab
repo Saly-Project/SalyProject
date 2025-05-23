@@ -3216,7 +3216,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516439818402100184}
   serializedVersion: 4
-  m_Mass: 80
+  m_Mass: 70
   m_Drag: 1
   m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3273,6 +3273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  FXVolume: 1
+  boostFX: {fileID: 8300000, guid: 322461ae237f01440aceead72cabbc33, type: 3}
   pitchLimit: 90
   smoothing: 0.1
   StaminaBar: {fileID: 6174116428998889259}
@@ -3321,6 +3323,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   cam: {fileID: 3993437552192675227}
   projectile: {fileID: 7776095189224040569, guid: 25ca20d5887ebe544966e7e37355cc6a, type: 3}
+  projectileFX: {fileID: 8300000, guid: dd374ce22cd87884caf4b0ede0dd8b4b, type: 3}
   LeftFirePoint: {fileID: 2850296069838715382}
   RightFirePoint: {fileID: 8813770219011209700}
   fireRate: 8
@@ -3419,7 +3422,9 @@ MonoBehaviour:
   cam: {fileID: 3993437552192675227}
   indicatorUI: {fileID: 4668932163784422394}
   screenEdgeBuffer: 50
-  manager: {fileID: 4377179817373442327, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+  managerHyperlane: {fileID: 5687794424606858033, guid: 29543214b6520bd41bd80ccb7f4d616c, type: 3}
+  managerWarpway: {fileID: 6844916966598154009, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+  managerOblivion: {fileID: 7763918528693718541, guid: cd3e981aaa676cf439d74c6a360777a9, type: 3}
 --- !u!114 &5918808497096985712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3434,7 +3439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Charged: 1
   Duration: 6
-  Shield: {fileID: 6911301092416538385}
+  ObjShield: {fileID: 6911301092416538385}
   UIshield: {fileID: 3058236800111449501}
   RechargeVFX: {fileID: 3248635198738779518, guid: 523172fe0c94f0f44833ae3f40b93c48, type: 3}
 --- !u!1 &5561553328476923580
@@ -10621,6 +10626,10 @@ PrefabInstance:
     - target: {fileID: 2955322174178533430, guid: b20aa218d77366a4bafedfee464c9b40, type: 3}
       propertyPath: m_Name
       value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955322174178533430, guid: b20aa218d77366a4bafedfee464c9b40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

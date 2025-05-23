@@ -1,80 +1,53 @@
 using UnityEngine;
-using Unity.Netcode;
 
-public class AIController : NetworkBehaviour
+public class AIController : MonoBehaviour
 {
-    public Transform[] waypoints; // Waypoints for the track
-    public float baseSpeed = 10f; // Base speed
-    public float turnSpeed = 5f; // Turning speed
-    public float aggressiveness = 1f; // Aggressiveness level (1 = normal, >1 = more aggressive)
-    public float reactionTime = 0.5f; // Delay in reacting to changes (lower = faster reaction)
-    public float speedVariation = 2f; // Random speed variation
+    [SerializeField] private float checkpointReachDistance = 2f;
+    private float speed = 20f;
+    private float baseSpeed = 20f;
+    private float speedVariance = 3f;
+    [SerializeField] private float turnSpeed = 2f;
 
-    private int currentWaypointIndex = 0;
-    private float currentSpeed;
-    private float reactionTimer;
+    private Transform[] checkpoints;
+    private int currentCheckpointIndex = 0;
 
-    void Start()
+    public void SetCheckpoints(Transform[] cps)
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.useGravity = false; // Disable gravity
-        }
+        checkpoints = cps;
+        currentCheckpointIndex = 0;
     }
 
-    public void InitializeAI()
+    public void SetSpeed(float newSpeed)
     {
-        // Assign waypoints dynamically if needed
-        currentSpeed = baseSpeed + Random.Range(-speedVariation, speedVariation);
+        speed = newSpeed;
+        baseSpeed = newSpeed; // Store for future randomization
+    }
+
+    public void SetSpeedVariance(float variance)
+    {
+        speedVariance = variance;
     }
 
     private void Update()
     {
-        reactionTimer += Time.deltaTime;
+        if (checkpoints == null || checkpoints.Length == 0) return;
 
-        // React to changes only after the reaction time has passed
-        if (reactionTimer >= reactionTime)
+        Transform target = checkpoints[currentCheckpointIndex];
+
+        Vector3 direction = (target.position - transform.position).normalized;
+        if (direction != Vector3.zero)
         {
-            MoveTowardsWaypoint();
-            reactionTimer = 0f;
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, turnSpeed * Time.deltaTime);
         }
-    }
 
-    private void MoveTowardsWaypoint()
-    {
-        if (waypoints.Length == 0) return;
+        transform.position += transform.forward * speed * Time.deltaTime;
 
-        Transform targetWaypoint = waypoints[currentWaypointIndex];
-        Vector3 direction = (targetWaypoint.position - transform.position).normalized;
-
-        // Adjust speed based on aggressiveness
-        float adjustedSpeed = currentSpeed * aggressiveness;
-
-        // Move forward
-        Vector3 newPosition = transform.position + direction * adjustedSpeed * Time.deltaTime;
-
-        // Rotate towards the waypoint
-        Quaternion targetRotation = Quaternion.LookRotation(direction);
-        Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
-
-        // Synchronize position and rotation
-        UpdateAIPositionServerRpc(newPosition, newRotation);
-
-        // Check if the AI reached the waypoint
-        if (Vector3.Distance(transform.position, targetWaypoint.position) < 1f)
+        if (Vector3.Distance(transform.position, target.position) < checkpointReachDistance)
         {
-            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
-
-            // Randomize speed slightly at each waypoint
-            currentSpeed = baseSpeed + Random.Range(-speedVariation, speedVariation);
+            currentCheckpointIndex = (currentCheckpointIndex + 1) % checkpoints.Length;
+            // Randomize speed each time a checkpoint is reached
+            speed = baseSpeed + Random.Range(-speedVariance, speedVariance);
         }
-    }
-
-    [ServerRpc]
-    private void UpdateAIPositionServerRpc(Vector3 position, Quaternion rotation)
-    {
-        transform.position = position;
-        transform.rotation = rotation;
     }
 }
