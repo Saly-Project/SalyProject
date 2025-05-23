@@ -70,7 +70,7 @@ public class MissileLauncher : MonoBehaviour
             if (!Charged)
             {
                 Charged = true;
-                Destroy(other);
+                Destroy(other.gameObject);
                 UImissile.SetActive(true);
                 var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity) as GameObject;
                 Destroy(recharge, 2f);
