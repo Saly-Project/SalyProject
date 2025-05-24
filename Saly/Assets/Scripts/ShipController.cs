@@ -69,8 +69,13 @@ public class ShipController : MonoBehaviourPunCallbacks
 
     public bool isFrozen = true;
 
-    public GameObject WinUI;
+    public GameObject FinishUI;
     public GameObject ScreenUI;
+
+    public GameManagerPhotonFreeze GameManagerPhotonFreeze;
+
+    public GameObject WinUI;
+    public GameObject LoseUI;
 
     public void SetFrozen(bool freeze)
     {
@@ -270,7 +275,21 @@ public class ShipController : MonoBehaviourPunCallbacks
     {
         if (other.CompareTag("FinalCheckpoint"))
         {
-            WinUI.SetActive(true);
+            if (GameManagerPhotonFreeze.isThereWinner)
+            {
+                FinishUI.SetActive(true);
+                WinUI.SetActive(false);
+                LoseUI.SetActive(true);
+            }
+            else
+            {
+                FinishUI.SetActive(true);
+                WinUI.SetActive(true);
+                LoseUI.SetActive(false);
+
+                GameManagerPhotonFreeze.isThereWinner = true;
+            }
+
             ScreenUI.SetActive(false);
         }
     }

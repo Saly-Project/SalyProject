@@ -1609,6 +1609,10 @@ PrefabInstance:
       propertyPath: CheckpointFX
       value: 
       objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
+    - target: {fileID: 4903309140650369683, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
+      propertyPath: m_TagString
+      value: FinalCheckpoint
+      objectReference: {fileID: 0}
     - target: {fileID: 5071824834271655011, guid: 75e9d9ac3931e3e46b943be8dc2cc110, type: 3}
       propertyPath: CheckpointFX
       value: 

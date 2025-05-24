@@ -17,6 +17,8 @@ public class GameManagerPhotonFreeze : MonoBehaviourPunCallbacks
     private float countdown;
     private bool gameStarted = false;
 
+    public bool isThereWinner = false;
+
     void Start()
     {
         countdown = countdownDuration;
