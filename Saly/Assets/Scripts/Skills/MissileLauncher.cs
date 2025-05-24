@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Runtime.InteropServices;
+using Photon.Pun;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
@@ -51,11 +52,14 @@ public class MissileLauncher : Skill
 
     void Update()
     {
+        // Exécuter uniquement sur le joueur local
+        if (!photonView.IsMine) return;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Charged)
+            if (Charged) // if the skill can be enabled
             {
-                LauchMissile();
+                photonView.RPC("LauchMissile", RpcTarget.All);
             }
         }
     }

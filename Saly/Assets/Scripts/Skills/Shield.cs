@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using Photon.Pun;
 using UnityEngine;
 
 public class ForceField : Skill
@@ -17,6 +18,7 @@ public class ForceField : Skill
         Shield.SetActive(IsActive);
     }
 
+    [PunRPC]
     void ActivateShield()
     {
         IsActive = true;
@@ -26,6 +28,7 @@ public class ForceField : Skill
         UIskill.SetActive(false);
     }
 
+    [PunRPC]
     void DesactivateShield()
     {
         IsActive = false;
@@ -37,11 +40,14 @@ public class ForceField : Skill
     {
         Shield.transform.position = this.transform.position; // the shield follows the player's position
 
+        // Exécuter uniquement sur le joueur local
+        if (!photonView.IsMine) return;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (Charged) // if the skill can be enabled
             {
-                ActivateShield();
+                photonView.RPC("ActivateShield", RpcTarget.All);
             }
         }
 
@@ -51,7 +57,7 @@ public class ForceField : Skill
 
             if (ShieldClock <= 0)
             {
-                DesactivateShield();
+                photonView.RPC("DesactivateShield", RpcTarget.All);
             }
         }
     }

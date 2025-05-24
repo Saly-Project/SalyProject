@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3525
+  controlID: 3700
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -104,23 +104,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 2560
-      height: 1256
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 1280, y: 628}
+      width: 1386
+      height: 806
+    m_Scale: {x: 0.721875, y: 0.721875}
+    m_Translation: {x: 693, y: 403}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1280
-      y: -628
-      width: 2560
-      height: 1256
+      x: -960
+      y: -558.2684
+      width: 1920
+      height: 1116.5367
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2560, y: 1277}
+  m_defaultScale: 0.721875
+  m_LastWindowPixelSize: {x: 1386, y: 827}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3489
+  controlID: 3713
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3481
+  controlID: 3656
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: eebd0000
       m_LastClickedID: 0
       m_ExpandedIDs: 8eaafeff7ec1feff9612ffff4c16ffff6c19ffffe2c9ffff984d01005c590100de5a0100865d0100a25d0100
       m_RenameOverlay:
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.07343124, y: 0.6891569, z: -0.070539266, w: -0.71742296}
     speed: 2
-    m_Value: {x: -0.07343124, y: 0.6891569, z: -0.070539266, w: -0.717423}
+    m_Value: {x: -0.07343121, y: 0.68915665, z: -0.07053924, w: -0.7174227}
   m_Size:
     m_Target: 14.055351
     speed: 2
@@ -4329,7 +4329,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -4338,14 +4338,14 @@ MonoBehaviour:
     y: 853
     width: 1910
     height: 448
-  m_MinSize: {x: 51, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -4393,7 +4393,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Resources
+    - Assets/Scripts/Skills
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -4403,15 +4403,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Prefabs/Resources/Ships Prefabs
+  - Assets/Scripts/Skills
   m_LastFoldersGridSize: 71
   m_LastProjectPath: C:\Users\Cooler Master\Documents\epita\SalyProject\Saly
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ac2f0100
-    m_LastClickedID: 77740
+    scrollPos: {x: 0, y: 319}
+    m_SelectedIDs: 9c390100
+    m_LastClickedID: 80284
     m_ExpandedIDs: 000000009a3801009c3801009e380100a0380100a2380100a4380100a6380100a8380100aa380100ac380100ae380100b0380100b2380100b4380100b6380100b8380100ba380100bc380100be380100c0380100c2380100c4380100c6380100c8380100ca380100cc380100ce380100d0380100d2380100d4380100d6380100d8380100da380100dc380100de380100e038010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -4467,9 +4467,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: eebd0000
+    m_LastClickedInstanceID: 48622
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300003eaa0000f401010092fd0000b214010000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

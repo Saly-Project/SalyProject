@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 public class SlowShockwave : Skill
@@ -23,14 +24,17 @@ public class SlowShockwave : Skill
     // Update is called once per frame
     void Update()
     {
+        // Exécuter uniquement sur le joueur local
+        if (!photonView.IsMine) return;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (Charged && !IsActive) // if the skill can be enabled
             {
                 IsActive = true;
                 Hypocenter = transform.position;
-                ShockwaveClock = 0;
-                SpawnShockwave();
+                // Appelle l'effet sur TOUS les clients via RPC
+                photonView.RPC("SpawnShockwave", RpcTarget.All);
             }
         }
 
@@ -60,6 +64,7 @@ public class SlowShockwave : Skill
         }
     }
 
+    [PunRPC]
     void SpawnShockwave()
     {
         Charged = false;
