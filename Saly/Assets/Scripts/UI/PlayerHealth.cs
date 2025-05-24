@@ -85,4 +85,19 @@ public class PlayerHealth : MonoBehaviourPun
             Die();
         }
     }
+
+    [PunRPC]
+    public void TakeDamageRPC(int dmg)
+    {
+        _Health -= dmg;
+        Debug.Log(gameObject.name + " lost " + dmg + " HP");
+        HealthBar.fillAmount = _Health / maxHealth;
+
+        if (_Health <= 0)
+        {
+            Debug.Log("💀 Player died");
+            // Add death logic here
+        }
+    }
+
 }

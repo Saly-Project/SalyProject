@@ -47,19 +47,22 @@ public class WeaponShooting : MonoBehaviourPun
             float normalizedDistance = Mathf.Clamp01((distance - 7.5f) / (maxRange - 7.5f));
             damage = (int)Mathf.Lerp(10, 1, normalizedDistance);
 
-            if (hit.transform.TryGetComponent(out PlayerHealth health))
+            if (hit.transform.TryGetComponent(out PhotonView targetPV))
             {
-                health.TakeDamage(damage); // You’ll need to make this PUN-compatible too
+                targetPV.RPC("TakeDamageRPC", targetPV.Owner, damage);
             }
+
         }
 
         // Spawn the projectile on all clients
-        photonView.RPC("Shoot", RpcTarget.All, LeftFirePoint.position, LeftFirePoint.rotation, RightFirePoint.position, RightFirePoint.rotation, leftSide);
+        //photonView.RPC("Shoot", RpcTarget.All, LeftFirePoint.position, LeftFirePoint.rotation, RightFirePoint.position, RightFirePoint.rotation, leftSide);
+        photonView.RPC("Shoot", RpcTarget.All, LeftFirePoint.position, LeftFirePoint.rotation, RightFirePoint.position, RightFirePoint.rotation, leftSide, photonView.ViewID);
         leftSide = !leftSide;
     }
 
     [PunRPC]
-    void Shoot(Vector3 leftPos, Quaternion leftRot, Vector3 rightPos, Quaternion rightRot, bool useLeft)
+    void Shoot(Vector3 leftPos, Quaternion leftRot, Vector3 rightPos, Quaternion rightRot, bool useLeft, int shooterViewID)
+
     {
         Vector3 spawnPos = useLeft ? leftPos : rightPos;
         Quaternion spawnRot = useLeft ? leftRot : rightRot;
