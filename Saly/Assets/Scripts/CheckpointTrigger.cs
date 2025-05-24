@@ -1,6 +1,7 @@
+using Photon.Pun;
 using UnityEngine;
 
-public class CheckpointTrigger : MonoBehaviour
+public class CheckpointTrigger : MonoBehaviourPunCallbacks
 {
     private CheckpointManager manager;
     [SerializeField] private AudioClip CheckpointFX;
@@ -15,6 +16,7 @@ public class CheckpointTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (!photonView.IsMine) return;
             Debug.Log("Checkpoint triggered by Player");
             AudioSource.PlayClipAtPoint(CheckpointFX, other.transform.position, 0.5f);
             manager.NextCheckpoint();

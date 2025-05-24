@@ -25,7 +25,6 @@ public class CheckpointManager : MonoBehaviourPunCallbacks
 
     public void NextCheckpoint()
     {
-        if (!photonView.IsMine) return;
 
         checkpoints[currentIndex].SetActive(false);
         currentIndex++;
