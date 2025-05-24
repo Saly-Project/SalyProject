@@ -25,6 +25,7 @@ Thumbs.db
 # VSCode
 .vscode/
 *.code-workspace
+.vs/
 
 # Rider
 .idea/

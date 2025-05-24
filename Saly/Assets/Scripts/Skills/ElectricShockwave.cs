@@ -31,7 +31,7 @@ public class ElectricShockwave : Skill
         }
 
         if (IsActive) 
-        { 
+        {
             ShockwaveClock += Time.deltaTime;
 
             if (ShockwaveClock > Duration) 
@@ -46,7 +46,7 @@ public class ElectricShockwave : Skill
                     if (enemy != gameObject)
                     {
                         var dist = Vector3.Distance(Hypocenter, enemy.transform.position);
-                        if (dist <= Size) 
+                        if (dist <= Size / 2) 
                         {
                             enemy.GetComponent<Skill>().Disable();
                         }

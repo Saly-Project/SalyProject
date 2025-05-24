@@ -4329,7 +4329,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -4344,8 +4344,8 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -4393,7 +4393,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Prefabs/Ships Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -4403,16 +4403,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Prefabs
-  m_LastFoldersGridSize: 71
-  m_LastProjectPath: /Users/axe/Documents/GitHub/SalyProject/Saly
+  - Assets/Prefabs/Ships Prefabs
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\Cooler Master\Documents\epita\SalyProject\Saly
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e0f0100
-    m_LastClickedID: 69518
-    m_ExpandedIDs: 00000000b00e0100b20e0100b40e0100b60e0100b80e0100ba0e0100bc0e0100be0e0100c00e0100c20e0100c40e0100c60e0100c80e0100ca0e0100cc0e0100ce0e0100d00e0100d20e0100d40e0100d60e0100d80e0100da0e0100dc0e0100de0e01008e0f010000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 320b0100
+    m_LastClickedID: 68402
+    m_ExpandedIDs: 000000005c0a01005e0a0100600a0100620a0100640a0100660a0100680a01006a0a01006c0a01006e0a0100700a0100720a0100740a0100760a0100780a01007a0a01007c0a01007e0a0100800a0100820a0100840a0100860a0100880a01008a0a01008c0a01008e0a0100900a0100920a0100940a0100960a0100980a01009a0a01009c0a01009e0a0100a00a0100a20a010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4441,7 +4441,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b00e0100b20e0100b40e0100b60e0100b80e0100ba0e0100bc0e0100be0e0100c00e0100c20e0100c40e0100c60e0100c80e0100ca0e0100cc0e0100ce0e0100d00e0100d20e0100d40e0100d60e0100d80e0100da0e0100dc0e0100de0e010000ca9a3b
+    m_ExpandedIDs: 000000005c0a01005e0a0100600a0100620a0100640a0100660a0100680a01006a0a01006c0a01006e0a0100700a0100720a0100740a0100760a0100780a01007a0a01007c0a01007e0a0100800a0100820a0100840a0100860a0100880a01008a0a01008c0a01008e0a0100900a0100920a0100940a0100960a0100980a01009a0a01009c0a01009e0a0100a00a0100a20a010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

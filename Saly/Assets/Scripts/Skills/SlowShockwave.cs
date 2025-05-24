@@ -7,6 +7,9 @@ public class SlowShockwave : Skill
     public float Size;
     public GameObject RechargeVFX;
 
+    public float SlowValue;
+    public float SlowDuration;
+
     private bool IsActive = false;
     private float ShockwaveClock = 0;
     private Vector3 Hypocenter;
@@ -26,6 +29,7 @@ public class SlowShockwave : Skill
             {
                 IsActive = true;
                 Hypocenter = transform.position;
+                ShockwaveClock = 0;
                 SpawnShockwave();
             }
         }
@@ -46,9 +50,9 @@ public class SlowShockwave : Skill
                     if (enemy != gameObject)
                     {
                         var dist = Vector3.Distance(Hypocenter, enemy.transform.position);
-                        if (dist <= Size) 
+                        if (dist <= Size / 2)
                         {
-                            // Slow enemy
+                            enemy.GetComponent<ShipController>().Slow(SlowValue, SlowDuration);
                         }
                     }
                 }
