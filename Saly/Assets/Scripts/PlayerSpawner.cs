@@ -7,11 +7,19 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        Transform[] spawnPoints = GameObject.Find("Spawns").GetComponentsInChildren<Transform>();
+        if (!PhotonNetwork.IsConnected || !PhotonNetwork.InRoom) return;
 
-        int index = PhotonNetwork.LocalPlayer.ActorNumber % (spawnPoints.Length - 1); // avoid using the parent
+        // Get spawn points
+        Transform[] spawnPoints = GameObject.Find("SpawnPoint")?.GetComponentsInChildren<Transform>();
 
-        Transform spawnPoint = spawnPoints[index + 1]; // +1 to skip the parent
+        if (spawnPoints == null || spawnPoints.Length <= 1)
+        {
+            Debug.LogError("No spawn points found! Make sure 'Spawns' has children.");
+            return;
+        }
+
+        int index = PhotonNetwork.LocalPlayer.ActorNumber % (spawnPoints.Length - 1);
+        Transform spawnPoint = spawnPoints[index + 1]; // skip the parent
 
         PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint.position, spawnPoint.rotation);
     }

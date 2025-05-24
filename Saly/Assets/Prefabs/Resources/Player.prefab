@@ -3010,6 +3010,7 @@ GameObject:
   - component: {fileID: -575212599671118019}
   - component: {fileID: 9173964662824358329}
   - component: {fileID: 9157030301239900377}
+  - component: {fileID: -2928154432554739168}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -3072,7 +3073,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516439818402100184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
@@ -3097,12 +3098,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516439818402100184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b75e065e3a30354fb7476199e40732f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   FXVolume: 1
   boostFX: {fileID: 8300000, guid: 322461ae237f01440aceead72cabbc33, type: 3}
   pitchLimit: 90
@@ -3145,7 +3145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516439818402100184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e087e30f0e803de4385d7efa14abb2d1, type: 3}
   m_Name: 
@@ -3169,7 +3169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516439818402100184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b3067159ea1af94c94654035aee51b8, type: 3}
   m_Name: 
@@ -3205,7 +3205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516439818402100184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8b89dcabfe88744ba83d8067e042815, type: 3}
   m_Name: 
@@ -3252,6 +3252,28 @@ MonoBehaviour:
   indicatorUI: {fileID: 4668932163784422394}
   screenEdgeBuffer: 50
   manager: {fileID: 4377179817373442327, guid: 332d8a40db2a9f141adab725939c9379, type: 3}
+--- !u!114 &-2928154432554739168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516439818402100184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &5561553328476923580
 GameObject:
   m_ObjectHideFlags: 0

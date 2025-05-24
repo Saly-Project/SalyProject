@@ -388,6 +388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solaris X
       objectReference: {fileID: 0}
+    - target: {fileID: 5855510191454894633, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5918808497096985712, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
       propertyPath: Shield
       value: 

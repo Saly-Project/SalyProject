@@ -1003,8 +1003,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449749381}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 449749382}
+        m_TargetAssemblyTypeName: LobbiesList, Assembly-CSharp
         m_MethodName: WarpwayPrev
         m_Mode: 1
         m_Arguments:
@@ -1802,8 +1802,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449749381}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 449749382}
+        m_TargetAssemblyTypeName: LobbiesList, Assembly-CSharp
         m_MethodName: WarpwayNext
         m_Mode: 1
         m_Arguments:
@@ -5084,8 +5084,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449749381}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 449749382}
+        m_TargetAssemblyTypeName: LobbiesList, Assembly-CSharp
         m_MethodName: OblivionNext
         m_Mode: 1
         m_Arguments:
@@ -8394,8 +8394,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449749381}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 449749382}
+        m_TargetAssemblyTypeName: LobbiesList, Assembly-CSharp
         m_MethodName: OblivionPrev
         m_Mode: 1
         m_Arguments:
@@ -9759,8 +9759,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449749381}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 449749382}
+        m_TargetAssemblyTypeName: LobbiesList, Assembly-CSharp
         m_MethodName: RandomPrev
         m_Mode: 1
         m_Arguments:
@@ -9891,8 +9891,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449749381}
-        m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
+      - m_Target: {fileID: 449749382}
+        m_TargetAssemblyTypeName: LobbiesList, Assembly-CSharp
         m_MethodName: HyperlaneNext
         m_Mode: 1
         m_Arguments:
