@@ -61,7 +61,7 @@ public class SlowShockwave : Skill
 
                             if (ship != null && view != null)
                             {
-                                view.RPC("Slow", RpcTarget.All, new object[] { new float[] { 2.5f, 3f } });
+                                view.RPC("Slow", RpcTarget.All, new object[] { new float[] { SlowValue, SlowDuration } });
                             }
                         }
                     }
