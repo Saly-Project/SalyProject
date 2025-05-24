@@ -2090,7 +2090,7 @@ MonoBehaviour:
   Oblivion: {fileID: 0}
   Random: {fileID: 0}
   inputField: {fileID: 0}
-  MapName: Hyperlane
+  MapName: 
 --- !u!114 &449749382
 MonoBehaviour:
   m_ObjectHideFlags: 0

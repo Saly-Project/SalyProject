@@ -400,6 +400,10 @@ PrefabInstance:
       propertyPath: UIshield
       value: 
       objectReference: {fileID: 4097445482348244958}
+    - target: {fileID: 6790510769626839814, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7058860665544151744, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 3218230495

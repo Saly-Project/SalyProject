@@ -43,6 +43,7 @@ public class LobbiesList : MonoBehaviourPunCallbacks
     public void OnCreateRoomClicked()
     {
         Debug.Log("🟢 Clicked Create Room");
+        Debug.Log("📦 Map to load: " + selectedMap);
 
         // 🔒 Photon-level readiness check
         if (!PhotonNetwork.IsConnectedAndReady)
@@ -83,6 +84,8 @@ public class LobbiesList : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        Debug.Log("📦 Map to load: " + selectedMap);
+
         if (PhotonNetwork.IsMasterClient)
         {
             Debug.Log("✅ Successfully joined room, loading map: " + selectedMap);

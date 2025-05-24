@@ -3098,7 +3098,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516439818402100184}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b75e065e3a30354fb7476199e40732f, type: 3}
   m_Name: 
@@ -3145,12 +3145,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516439818402100184}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e087e30f0e803de4385d7efa14abb2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   cam: {fileID: 3993437552192675227}
   projectile: {fileID: 7776095189224040569, guid: 25ca20d5887ebe544966e7e37355cc6a, type: 3}
   projectileFX: {fileID: 8300000, guid: dd374ce22cd87884caf4b0ede0dd8b4b, type: 3}
