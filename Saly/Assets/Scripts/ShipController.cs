@@ -77,6 +77,10 @@ public class ShipController : MonoBehaviourPunCallbacks
     public GameObject WinUI;
     public GameObject LoseUI;
 
+    private Coroutine chronoRoutine;
+    private bool isRunning = false;
+    public TextMeshProUGUI chronoText;
+
     public void SetFrozen(bool freeze)
     {
         isFrozen = freeze;
@@ -275,21 +279,23 @@ public class ShipController : MonoBehaviourPunCallbacks
     {
         if (other.CompareTag("FinalCheckpoint"))
         {
+            FinishUI.SetActive(true);
+
             if (GameManagerPhotonFreeze.isThereWinner)
             {
-                FinishUI.SetActive(true);
                 WinUI.SetActive(false);
                 LoseUI.SetActive(true);
             }
             else
             {
-                FinishUI.SetActive(true);
                 WinUI.SetActive(true);
                 LoseUI.SetActive(false);
 
                 GameManagerPhotonFreeze.isThereWinner = true;
             }
 
+            StopChrono();
+            isFrozen = true;
             ScreenUI.SetActive(false);
         }
     }
@@ -334,4 +340,49 @@ public class ShipController : MonoBehaviourPunCallbacks
         sensitivityValue.text = Math.Round(sensitivitySlider.value, 1).ToString();
         if (sensitivityValue.text.Length == 1) sensitivityValue.text += ",0";
     }
+
+    public void StartChrono()
+    {
+        if (chronoRoutine == null)
+        {
+            elapsed = 0f;
+            chronoRoutine = StartCoroutine(ChronoCoroutine());
+        }
+    }
+
+    public void StopChrono()
+    {
+        if (chronoRoutine != null)
+        {
+            StopCoroutine(chronoRoutine);
+            chronoRoutine = null;
+            isRunning = false;
+            Debug.Log("Chrono arrêté !");
+        }
+    }
+
+    public string GetElapsedTimeString()
+    {
+        int minutes = Mathf.FloorToInt(elapsed / 60f);
+        int seconds = Mathf.FloorToInt(elapsed % 60f);
+        return $"{minutes:D2}:{seconds:D2}";
+    }
+
+    private IEnumerator ChronoCoroutine()
+    {
+        isRunning = true;
+
+        while (true)
+        {
+            elapsed += Time.deltaTime;
+
+            // Optionnel : afficher dans un Text UI
+            if (chronoText != null)
+                chronoText.text = GetElapsedTimeString();
+
+            yield return null;
+        }
+    }
+
+    private float elapsed = 0f;
 }

@@ -3322,6 +3322,7 @@ MonoBehaviour:
   GameManagerPhotonFreeze: {fileID: 6884249746247415781, guid: faf42ec9625f55f40b59fa7aa0041f84, type: 3}
   WinUI: {fileID: 6004630483011963553}
   LoseUI: {fileID: 4962052949690314153}
+  chronoText: {fileID: 7966041720142495963}
 --- !u!114 &6790510769626839814
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -65,6 +65,7 @@ public class GameManagerPhotonFreeze : MonoBehaviourPunCallbacks
             var controller = go.GetComponent<ShipController>();
             if (controller != null)
             {
+                controller.StartChrono();
                 controller.isFrozen = state;
                 controller.enabled = !state;
             }
