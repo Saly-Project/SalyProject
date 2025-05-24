@@ -266,6 +266,15 @@ public class ShipController : MonoBehaviourPunCallbacks
         Hud.text = (Math.Round(displaySpeed / 5.0) * 5).ToString("F0") + " km.h";
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("FinalCheckpoint"))
+        {
+            WinUI.SetActive(true);
+            ScreenUI.SetActive(false);
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Boost Ring") && activeForwardSpeed > 0)
@@ -285,12 +294,6 @@ public class ShipController : MonoBehaviourPunCallbacks
             Destroy(other.gameObject);
             var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity);
             Destroy(recharge, 2f);
-        }
-
-        if (other.CompareTag("FinalCheckpoint"))
-        {
-            WinUI.SetActive(true);
-            ScreenUI.SetActive(false);
         }
     }
 
