@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviourPun
     private Coroutine rechargeHealth;
 
     public GameObject Model;
+    public float dieDuration = 5;
 
     private void Awake()
     {
@@ -47,7 +48,7 @@ public class PlayerHealth : MonoBehaviourPun
 
         if (_Health <= 0)
         {
-            photonView.RPC("Die", RpcTarget.AllBuffered, 5);
+            photonView.RPC("Die", RpcTarget.AllBuffered, dieDuration);
         }
 
         if (rechargeHealth != null) StopCoroutine(rechargeHealth);
@@ -96,7 +97,7 @@ public class PlayerHealth : MonoBehaviourPun
 
         if (_Health <= 0)
         {
-            photonView.RPC("Die", RpcTarget.AllBuffered, 5);
+            photonView.RPC("Die", RpcTarget.AllBuffered, dieDuration);
         }
     }
 
