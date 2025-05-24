@@ -67,6 +67,13 @@ public class ShipController : MonoBehaviourPunCallbacks
     private float SlowTimer = 0;
     private float maxSpeed = float.MaxValue;
 
+    private bool isFrozen = true;
+
+    public void SetFrozen(bool freeze)
+    {
+        isFrozen = freeze;
+    }
+
 
     private void Start()
     {
@@ -206,7 +213,7 @@ public class ShipController : MonoBehaviourPunCallbacks
     {
         if (!photonView.IsMine) return;
 
-        if (!PauseMenu.isPaused)
+        if (!PauseMenu.isPaused && !isFrozen)
         {
             MouseSteer();
             HandleInputs();

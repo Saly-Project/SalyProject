@@ -3161,6 +3161,7 @@ MonoBehaviour:
   weaponHitLayers:
     serializedVersion: 2
     m_Bits: 129
+  gameManagerPhotonFreeze: {fileID: 6884249746247415781, guid: faf42ec9625f55f40b59fa7aa0041f84, type: 3}
 --- !u!114 &9113070640145657133
 MonoBehaviour:
   m_ObjectHideFlags: 0

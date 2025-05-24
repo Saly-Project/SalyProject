@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|c:\\users\\cooler master\\documents\\epita\\salyproject\\saly\\assets\\scripts\\asteroidspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\asteroidspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +15,12 @@
       "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|c:\\users\\cooler master\\documents\\epita\\salyproject\\saly\\assets\\scripts\\skills\\slowshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\slowshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\slowshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\menu\\shipselection\\shipselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\shipselection\\shipselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AsteroidSpawner.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\AsteroidSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AsteroidSpawner.cs",
@@ -75,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ShipController.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\ShipController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ShipController.cs",
@@ -83,20 +83,20 @@
               "RelativeToolTip": "Assets\\Scripts\\ShipController.cs",
               "ViewState": "AgIAAJwAAAAAAAAAAAAmwLoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T12:34:44.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T12:34:44.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ElectricShockwave.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\ElectricShockwave.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\ElectricShockwave.cs",
               "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\ElectricShockwave.cs",
               "RelativeToolTip": "Assets\\Scripts\\Skills\\ElectricShockwave.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDYAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDkAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T10:57:02.729Z"
+              "WhenOpened": "2025-05-24T10:57:02.729Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -112,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ShipSelection.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Menu\\ShipSelection\\ShipSelection.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\ShipSelection\\ShipSelection.cs",
@@ -120,8 +120,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Menu\\ShipSelection\\ShipSelection.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwB8AAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T20:07:09.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T20:07:09.553Z"
             },
             {
               "$type": "Document",
@@ -161,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SlowShockwave.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\SlowShockwave.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\SlowShockwave.cs",
@@ -169,8 +168,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Skills\\SlowShockwave.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAowD8AAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T15:17:23.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T15:17:23.161Z"
             },
             {
               "$type": "Document",
