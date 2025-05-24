@@ -110,8 +110,7 @@ public class PlayerHealth : MonoBehaviourPun
 
         if (_Health <= 0)
         {
-            Debug.Log("💀 Player died");
-            // Add death logic here
+            photonView.RPC("Die", RpcTarget.AllBuffered, dieDuration);
         }
     }
 
