@@ -176,8 +176,11 @@ public class ShipController : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void Slow(float value, float duration)
+    public void Slow(float[] data)
     {
+        float value = data[0];
+        float duration = data[1];
+
         IsSlowed = true;
         SlowTimer = duration;
         maxSpeed = value;
