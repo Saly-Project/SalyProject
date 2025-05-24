@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using TMPro;
@@ -278,33 +278,38 @@ public class ShipController : MonoBehaviourPunCallbacks
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("FinalCheckpoint"))
+        if (other.CompareTag("FinalCheckpoint") && photonView.IsMine)
         {
             if (!GameManagerPhotonFreeze.isThereWinner)
             {
-                GameManagerPhotonFreeze.isThereWinner = true;
-                GameManagerPhotonFreeze.winnerViewID = photonView.ViewID;
+                // Ce joueur est le gagnant → notifier tous les clients
+                PhotonView.Find(1).RPC("DeclareWinner", RpcTarget.All, photonView.ViewID);
+                // (1) est l'ID du PhotonView sur le GameManagerPhotonFreeze
             }
 
-            // V�rifie si le joueur local est le gagnant
-            if (photonView.IsMine)
-            {
-                if (photonView.ViewID == GameManagerPhotonFreeze.winnerViewID)
-                {
-                    WinUI.SetActive(true);
-                    LoseUI.SetActive(false);
-                }
-                else
-                {
-                    WinUI.SetActive(false);
-                    LoseUI.SetActive(true);
-                }
-
-                StopChrono();
-                isFrozen = true;
-                ScreenUI.SetActive(false);
-            }
+            // Petit délai pour laisser le RPC s’exécuter (optionnel)
+            StartCoroutine(ShowEndScreenDelayed());
         }
+    }
+
+    IEnumerator ShowEndScreenDelayed()
+    {
+        yield return new WaitForSeconds(0.1f); // attendre que winnerViewID soit mis à jour
+
+        if (photonView.ViewID == GameManagerPhotonFreeze.winnerViewID)
+        {
+            WinUI.SetActive(true);
+            LoseUI.SetActive(false);
+        }
+        else
+        {
+            WinUI.SetActive(false);
+            LoseUI.SetActive(true);
+        }
+
+        StopChrono();
+        isFrozen = true;
+        ScreenUI.SetActive(false);
     }
 
     private void OnTriggerExit(Collider other)
@@ -364,7 +369,7 @@ public class ShipController : MonoBehaviourPunCallbacks
             StopCoroutine(chronoRoutine);
             chronoRoutine = null;
             isRunning = false;
-            Debug.Log("Chrono arr�t� !");
+            Debug.Log("Chrono arrêté !");
         }
     }
 

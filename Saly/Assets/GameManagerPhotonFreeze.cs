@@ -28,6 +28,13 @@ public class GameManagerPhotonFreeze : MonoBehaviourPunCallbacks
         ShowWaitingUI(true);
     }
 
+    [PunRPC]
+    public void DeclareWinner(int winnerViewID)
+    {
+        isThereWinner = true;
+        GameManagerPhotonFreeze.winnerViewID = winnerViewID;
+    }
+
     void Update()
     {
         if (gameStarted) return;
