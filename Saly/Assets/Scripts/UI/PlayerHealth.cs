@@ -13,6 +13,8 @@ public class PlayerHealth : MonoBehaviourPun
     public float ChargeRate;
     private Coroutine rechargeHealth;
 
+    public GameObject Model;
+
     private void Awake()
     {
         _Health = maxHealth;
@@ -45,17 +47,27 @@ public class PlayerHealth : MonoBehaviourPun
 
         if (_Health <= 0)
         {
-            Die();
+            Die(5);
         }
 
         if (rechargeHealth != null) StopCoroutine(rechargeHealth);
         rechargeHealth = StartCoroutine(RechargeHealth());
     }
 
-    private void Die()
+    private void Die(float duration)
     {
-        Debug.Log(gameObject.name + " is dead.");
-        // Handle death logic here
+        Model.SetActive(false);
+        GetComponent<ShipController>().isFrozen = true;
+
+        StartCoroutine(Revive(duration));
+    }
+
+    private IEnumerator Revive(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
+        Model.SetActive(true);
+        GetComponent<ShipController>().isFrozen = false;
     }
 
     private IEnumerator RechargeHealth()
