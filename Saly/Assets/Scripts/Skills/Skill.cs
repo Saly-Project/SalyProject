@@ -8,7 +8,7 @@ public class Skill : MonoBehaviourPunCallbacks
     public GameObject UIskill;
 
     [PunRPC]
-    void Disable()
+    public void Disable()
     {
         Charged = false;
         UIskill.SetActive(false);

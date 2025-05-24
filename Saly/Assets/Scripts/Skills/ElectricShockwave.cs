@@ -54,7 +54,13 @@ public class ElectricShockwave : Skill
                         var dist = Vector3.Distance(Hypocenter, enemy.transform.position);
                         if (dist <= Size / 2) 
                         {
-                            enemy.GetComponent<Skill>().photonView.RPC("Disable", RpcTarget.All);
+                            var skill = enemy.GetComponent<Skill>();
+                            var view = enemy.GetComponent<PhotonView>();
+
+                            if (skill != null && view != null)
+                            {
+                                view.RPC("Disable", RpcTarget.All);
+                            }
                         }
                     }
                 }
