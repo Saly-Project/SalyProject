@@ -269,6 +269,10 @@ MonoBehaviour:
   checkpointsParent: {fileID: 1188602994}
   asteroidPrefabs:
   - {fileID: 2140427511478123546, guid: e344429e1e91caa4cb2b3db17d9eaf42, type: 3}
+  - {fileID: 2140427511478123546, guid: e344429e1e91caa4cb2b3db17d9eaf42, type: 3}
+  - {fileID: 2140427511478123546, guid: e344429e1e91caa4cb2b3db17d9eaf42, type: 3}
+  - {fileID: 2140427511478123546, guid: e344429e1e91caa4cb2b3db17d9eaf42, type: 3}
+  - {fileID: 7389053645423544726, guid: 16cbdadd57bcb024fabed75e23d4e2d3, type: 3}
   interpolationDistance: 200
   asteroidsPerPoint: 1
   tunnelRadius: 75
