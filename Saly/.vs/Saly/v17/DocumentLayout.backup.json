@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|c:\\users\\cooler master\\documents\\epita\\salyproject\\saly\\assets\\scripts\\menu\\shipselection\\shipselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\shipselection\\shipselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|c:\\users\\cooler master\\documents\\epita\\salyproject\\saly\\assets\\scripts\\shipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\shield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\shield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\slowshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\slowshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\electricshockwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\shipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|c:\\users\\cooler master\\documents\\epita\\salyproject\\saly\\assets\\scripts\\menu\\shipselection\\shipselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\shipselection\\shipselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\shield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\skills\\shield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA908589-A128-DF0E-00D0-D0CBBDCC5D36}|Assembly-CSharp.csproj|C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\assets\\scripts\\skills\\missile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,30 +46,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ShipSelection.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Menu\\ShipSelection\\ShipSelection.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\ShipSelection\\ShipSelection.cs",
               "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Menu\\ShipSelection\\ShipSelection.cs",
               "RelativeToolTip": "Assets\\Scripts\\Menu\\ShipSelection\\ShipSelection.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA5wCkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T20:07:09.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ShipController.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\ShipController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ShipController.cs",
               "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\ShipController.cs",
               "RelativeToolTip": "Assets\\Scripts\\ShipController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwH4AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAcwPUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T18:20:30.222Z",
               "EditorCaption": ""
@@ -88,27 +88,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "SlowShockwave.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\SlowShockwave.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\SlowShockwave.cs",
               "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\SlowShockwave.cs",
               "RelativeToolTip": "Assets\\Scripts\\Skills\\SlowShockwave.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T15:17:23.161Z"
+              "WhenOpened": "2025-05-23T15:17:23.161Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ElectricShockwave.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\ElectricShockwave.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\ElectricShockwave.cs",
               "ToolTip": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\ElectricShockwave.cs",
               "RelativeToolTip": "Assets\\Scripts\\Skills\\ElectricShockwave.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T09:56:42.274Z"
+              "WhenOpened": "2025-05-23T09:56:42.274Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -124,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Shield.cs",
               "DocumentMoniker": "C:\\Users\\Cooler Master\\Documents\\epita\\SalyProject\\Saly\\Assets\\Scripts\\Skills\\Shield.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Skills\\Shield.cs",
