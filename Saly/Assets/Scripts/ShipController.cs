@@ -69,6 +69,9 @@ public class ShipController : MonoBehaviourPunCallbacks
 
     public bool isFrozen = true;
 
+    public GameObject WinUI;
+    public GameObject ScreenUI;
+
     public void SetFrozen(bool freeze)
     {
         isFrozen = freeze;
@@ -94,6 +97,7 @@ public class ShipController : MonoBehaviourPunCallbacks
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        WinUI.SetActive(false);
     }
 
     private void HandleInputs()
@@ -281,6 +285,12 @@ public class ShipController : MonoBehaviourPunCallbacks
             Destroy(other.gameObject);
             var recharge = Instantiate(RechargeVFX, other.transform.position, Quaternion.identity);
             Destroy(recharge, 2f);
+        }
+
+        if (other.CompareTag("FinalCheckpoint"))
+        {
+            WinUI.SetActive(true);
+            ScreenUI.SetActive(false);
         }
     }
 

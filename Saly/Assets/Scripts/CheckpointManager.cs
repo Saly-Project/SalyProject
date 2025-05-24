@@ -41,7 +41,7 @@ public class CheckpointManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            
+            // EXECUTE une fontion de fin de jeu
         }
 
         
