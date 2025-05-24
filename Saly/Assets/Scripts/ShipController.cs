@@ -106,7 +106,6 @@ public class ShipController : MonoBehaviourPunCallbacks
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        WinUI.SetActive(false);
     }
 
     private void HandleInputs()

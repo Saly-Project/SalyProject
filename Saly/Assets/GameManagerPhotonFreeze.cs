@@ -21,6 +21,7 @@ public class GameManagerPhotonFreeze : MonoBehaviourPunCallbacks
 
     void Start()
     {
+        isThereWinner = false;
         countdown = countdownDuration;
         FreezeAllPlayers(true);
         ShowWaitingUI(true);
