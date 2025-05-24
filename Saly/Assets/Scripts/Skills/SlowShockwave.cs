@@ -56,7 +56,13 @@ public class SlowShockwave : Skill
                         var dist = Vector3.Distance(Hypocenter, enemy.transform.position);
                         if (dist <= Size / 2)
                         {
-                            enemy.GetComponent<ShipController>().Slow(SlowValue, SlowDuration);
+                            var ship = enemy.GetComponent<ShipController>();
+                            var view = enemy.GetComponent<PhotonView>();
+
+                            if (ship != null && view != null)
+                            {
+                                view.RPC("Slow", RpcTarget.All, new [] {SlowValue, SlowDuration});
+                            }
                         }
                     }
                 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using System;
 
-public class ShipController : MonoBehaviourPun
+public class ShipController : MonoBehaviourPunCallbacks
 {
     // sound FX 
     [SerializeField] public float FXVolume;
@@ -175,7 +175,7 @@ public class ShipController : MonoBehaviourPun
         transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
     }
 
-
+    [PunRPC]
     public void Slow(float value, float duration)
     {
         IsSlowed = true;
