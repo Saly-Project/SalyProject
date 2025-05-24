@@ -1,7 +1,8 @@
 using System;
+using Photon.Pun;
 using UnityEngine;
 
-public class CheckpointManager : MonoBehaviour
+public class CheckpointManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] public GameObject[] checkpoints;
 
@@ -24,6 +25,8 @@ public class CheckpointManager : MonoBehaviour
 
     public void NextCheckpoint()
     {
+        if (!photonView.IsMine) return;
+
         checkpoints[currentIndex].SetActive(false);
         currentIndex++;
 
@@ -33,7 +36,13 @@ public class CheckpointManager : MonoBehaviour
 
             var indicator = FindObjectOfType<CheckpointIndicator>();
             if (indicator != null)
+            {
                 indicator.checkpointTarget = checkpoints[currentIndex].transform;
+            }
+        }
+        else
+        {
+            
         }
 
         
