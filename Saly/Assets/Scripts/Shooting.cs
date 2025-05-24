@@ -27,10 +27,11 @@ public class WeaponShooting : MonoBehaviourPun
         {
             timeToFire = Time.time + 1 / fireRate;
             AudioSource.PlayClipAtPoint(projectileFX, transform.position, 0.5f);
-            Fire();
+            photonView.RPC("TakeDamageRPC", RpcTarget.MasterClient);
         }
     }
 
+    [PunRPC]
     void Fire()
     {
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
