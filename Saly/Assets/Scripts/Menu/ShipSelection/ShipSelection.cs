@@ -30,7 +30,6 @@ public class ShipSelection : MonoBehaviour
     public void SelectButton()
     {
         PlayerPrefs.SetString("spaceship", transform.GetChild(currentShip).name);
-        NetworkManager.Singleton.NetworkConfig.PlayerPrefab = GetPrefabByName(transform.GetChild(currentShip).name);
     }
 
     public GameObject GetPrefabByName(string name)

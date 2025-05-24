@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerSpawner : MonoBehaviourPunCallbacks
 {
-    public GameObject playerPrefab;
     private bool hasSpawned = false;
 
     void Start()
@@ -39,7 +38,7 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
         Transform spawnPoint = spawnPoints[index + 1];
 
         Debug.Log($"🚀 Spawning player at index {index}: ({spawnPoint.position})");
-        PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint.position, spawnPoint.rotation);
+        PhotonNetwork.Instantiate(PlayerPrefs.GetString("spaceship", "Aetherwing"), spawnPoint.position, spawnPoint.rotation);
         hasSpawned = true;
     }
 }
