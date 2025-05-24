@@ -737,7 +737,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 6d291b3d51b76a64bb13539fc30b85f7, type: 3}
     - target: {fileID: 5547434032191735721, guid: 29543214b6520bd41bd80ccb7f4d616c, type: 3}
       propertyPath: m_TagString
-      value: FinalCheckpoint
+      value: Checkpoint
       objectReference: {fileID: 0}
     - target: {fileID: 5687794424606858033, guid: 29543214b6520bd41bd80ccb7f4d616c, type: 3}
       propertyPath: checkpoints.Array.size
