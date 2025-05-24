@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using Photon.Pun;
 
-public class OrbSpawner : MonoBehaviour
+public class OrbSpawner : MonoBehaviourPunCallbacks
 {
     public GameObject checkpointsParent;
     public GameObject[] asteroidPrefabs;
@@ -8,18 +9,15 @@ public class OrbSpawner : MonoBehaviour
     public float interpolationDistance = 5f;
     public int asteroidsPerPoint = 3;
     public float tunnelRadius = 6f;
-
-    [Tooltip("Rayon d'exclusion autour et devant les checkpoints")]
     public float safeRadius = 10f;
 
-
-    // particles
-    public GameObject particleHintPrefab; // à assigner dans l'inspecteur
-    public float particleSpacing = 25f;   // distance entre chaque particule
-
+    public GameObject particleHintPrefab;
+    public float particleSpacing = 25f;
 
     void Start()
     {
+        if (!PhotonNetwork.IsMasterClient) return;
+
         if (checkpointsParent == null || asteroidPrefabs == null || asteroidPrefabs.Length == 0)
         {
             Debug.LogError("Checkpoints ou prefabs non assignés !");
@@ -40,7 +38,6 @@ public class OrbSpawner : MonoBehaviour
 
             float segmentLength = Vector3.Distance(startPos, endPos);
             Vector3 direction = (endPos - startPos).normalized;
-
             int pointsCount = Mathf.Max(1, Mathf.CeilToInt(segmentLength / interpolationDistance));
 
             for (int p = 0; p <= pointsCount; p++)
@@ -63,20 +60,17 @@ public class OrbSpawner : MonoBehaviour
                     while (IsTooCloseToAnyCheckpoint(spawnPos, scale) || IsInFrontOfAnyCheckpoint(spawnPos, scale));
 
                     GameObject prefabToSpawn = asteroidPrefabs[Random.Range(0, asteroidPrefabs.Length)];
-                    GameObject asteroid = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
+                    GameObject asteroid = PhotonNetwork.Instantiate(prefabToSpawn.name, spawnPos, Quaternion.identity);
                     asteroid.transform.localScale = Vector3.one * scale;
 
                     Rigidbody rb = asteroid.GetComponent<Rigidbody>();
                     if (rb != null)
                     {
-                        // Masse proportionnelle au volume (≈ scale^3)
-                        rb.mass = Mathf.Pow(scale, 1.25f) * 0.01f; // ajuste le facteur si c’est trop lourd/léger
+                        rb.mass = Mathf.Pow(scale, 1.25f) * 0.01f;
                     }
-
-
                 }
 
-                // Spawner les particules guides à intervalle régulier
+                // Particles
                 if (particleHintPrefab != null)
                 {
                     int particleCount = Mathf.FloorToInt(segmentLength / particleSpacing);
@@ -85,29 +79,18 @@ public class OrbSpawner : MonoBehaviour
                     {
                         float t = (pi * particleSpacing) / segmentLength;
                         Vector3 basePos = Vector3.Lerp(startPos, endPos, t);
-
-                        // Offset aléatoire initial autour du chemin (sphere radius 1.5f max)
                         Vector3 randomOffset = Random.insideUnitSphere * Random.Range(15f, 25f);
-
                         Vector3 spawnPos = basePos + randomOffset;
 
-                        GameObject particle = Instantiate(particleHintPrefab, spawnPos, Quaternion.identity);
-
+                        GameObject particle = PhotonNetwork.Instantiate(particleHintPrefab.name, spawnPos, Quaternion.identity);
                         float randomScale = Random.Range(0.1f, 1f);
                         particle.transform.localScale = Vector3.one * randomScale;
-
-                        // Si tu veux que la particule bouge un peu en flottant, ajoute un script sur elle qui fera une petite oscillation dans Update()
                     }
                 }
-
             }
         }
 
-        Debug.Log("Tunnel d'astéroïdes spawné !");
-
-
-
-
+        Debug.Log("✅ Orb tunnel spawned by Master Client");
     }
 
     bool IsTooCloseToAnyCheckpoint(Vector3 position, float asteroidSize)
@@ -133,8 +116,7 @@ public class OrbSpawner : MonoBehaviour
         for (int i = 0; i < count - 1; i++)
         {
             Transform checkpoint = checkpointsParent.transform.GetChild(i);
-            Transform next = checkpointsParent.transform.GetChild(i + 1);
-
+            Transform next = checkpointsParent.transform.GetChild(i + 1).position;
             Vector3 forward = (next.position - checkpoint.position).normalized;
             Vector3 toAsteroid = position - checkpoint.position;
 
