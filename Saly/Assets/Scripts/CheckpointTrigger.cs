@@ -16,10 +16,13 @@ public class CheckpointTrigger : MonoBehaviourPunCallbacks
     {
         if (other.CompareTag("Player"))
         {
-            if (!photonView.IsMine) return;
-            Debug.Log("Checkpoint triggered by Player");
-            AudioSource.PlayClipAtPoint(CheckpointFX, other.transform.position, 0.5f);
-            manager.NextCheckpoint();
+            PhotonView playerView = other.GetComponent<PhotonView>();
+            if (playerView != null && playerView.IsMine)
+            {
+                Debug.Log("Checkpoint triggered by local player");
+                AudioSource.PlayClipAtPoint(CheckpointFX, other.transform.position, 0.5f);
+                manager.NextCheckpoint();
+            }
         }
     }
 }
