@@ -18,6 +18,7 @@ public class GameManagerPhotonFreeze : MonoBehaviourPunCallbacks
     private bool gameStarted = false;
 
     public bool isThereWinner = false;
+    public static int winnerViewID = -1;
 
     void Start()
     {

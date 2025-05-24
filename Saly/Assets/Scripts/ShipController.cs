@@ -280,22 +280,30 @@ public class ShipController : MonoBehaviourPunCallbacks
     {
         if (other.CompareTag("FinalCheckpoint"))
         {
-            if (GameManagerPhotonFreeze.isThereWinner)
+            if (!GameManagerPhotonFreeze.isThereWinner)
             {
-                WinUI.SetActive(false);
-                LoseUI.SetActive(true);
-            }
-            else
-            {
-                WinUI.SetActive(true);
-                LoseUI.SetActive(false);
-
                 GameManagerPhotonFreeze.isThereWinner = true;
+                GameManagerPhotonFreeze.winnerViewID = photonView.ViewID;
             }
 
-            StopChrono();
-            isFrozen = true;
-            ScreenUI.SetActive(false);
+            // Vérifie si le joueur local est le gagnant
+            if (photonView.IsMine)
+            {
+                if (photonView.ViewID == GameManagerPhotonFreeze.winnerViewID)
+                {
+                    WinUI.SetActive(true);
+                    LoseUI.SetActive(false);
+                }
+                else
+                {
+                    WinUI.SetActive(false);
+                    LoseUI.SetActive(true);
+                }
+
+                StopChrono();
+                isFrozen = true;
+                ScreenUI.SetActive(false);
+            }
         }
     }
 
