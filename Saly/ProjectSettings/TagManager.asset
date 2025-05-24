@@ -18,6 +18,7 @@ TagManager:
   - CheckpointParent
   - AI
   - FinalCheckpoint
+  - Model
   layers:
   - Default
   - TransparentFX

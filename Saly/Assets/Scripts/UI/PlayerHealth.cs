@@ -94,7 +94,7 @@ public class PlayerHealth : MonoBehaviourPun
 
         if (_Health <= 0)
         {
-            Die();
+            Die(5);
         }
     }
 
