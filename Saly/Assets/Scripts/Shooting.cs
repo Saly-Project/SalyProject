@@ -27,11 +27,10 @@ public class WeaponShooting : MonoBehaviourPun
         {
             timeToFire = Time.time + 1 / fireRate;
             AudioSource.PlayClipAtPoint(projectileFX, transform.position, 0.5f);
-            photonView.RPC("TakeDamageRPC", RpcTarget.MasterClient);
+            Fire();
         }
     }
 
-    [PunRPC]
     void Fire()
     {
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -57,13 +56,15 @@ public class WeaponShooting : MonoBehaviourPun
 
         // Spawn the projectile on all clients
         //photonView.RPC("Shoot", RpcTarget.All, LeftFirePoint.position, LeftFirePoint.rotation, RightFirePoint.position, RightFirePoint.rotation, leftSide);
-        photonView.RPC("Shoot", RpcTarget.All, LeftFirePoint.position, LeftFirePoint.rotation, RightFirePoint.position, RightFirePoint.rotation, leftSide, photonView.ViewID);
-        leftSide = !leftSide;
+        photonView.RPC("Shoot", RpcTarget.All,
+    LeftFirePoint.position, LeftFirePoint.rotation,
+    RightFirePoint.position, RightFirePoint.rotation,
+    leftSide, destination); leftSide = !leftSide;
     }
 
-    [PunRPC]
-    void Shoot(Vector3 leftPos, Quaternion leftRot, Vector3 rightPos, Quaternion rightRot, bool useLeft, int shooterViewID)
 
+    [PunRPC]
+    void Shoot(Vector3 leftPos, Quaternion leftRot, Vector3 rightPos, Quaternion rightRot, bool useLeft, Vector3 destination)
     {
         Vector3 spawnPos = useLeft ? leftPos : rightPos;
         Quaternion spawnRot = useLeft ? leftRot : rightRot;
