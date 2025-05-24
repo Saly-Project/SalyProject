@@ -1676,7 +1676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea8e1fadee210440877c65d1b41d7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   Player: {fileID: 5855510191454894633}
   povs:
   - {fileID: 4483213484268164983}
@@ -3209,7 +3208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b89dcabfe88744ba83d8067e042815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   maxHealth: 100
   HealthBar: {fileID: 3064858532616371015}
   ChargeRate: 10
@@ -3266,7 +3264,7 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []

@@ -1,36 +1,41 @@
 using UnityEngine;
-using Unity.Netcode;
+using Photon.Pun;
 
-public class Projectile : NetworkBehaviour
+public class Projectile : MonoBehaviourPunCallbacks
 {
-
     public GameObject impactVFX;
     private bool collided;
     [SerializeField] private AudioClip impactFX;
 
-
-
-
     void Start()
     {
-        if (!IsOwner) return;
+        // OPTIONAL: destroy after time if not hit
+        Destroy(gameObject, 3f);
     }
 
-
-    void OnCollisionEnter(Collision co){
-        if (co.gameObject.tag != "Player" && co.gameObject.tag != "Bullet" && !collided && co.gameObject.tag != "Boost Ring")
-        {
-            var impact = Instantiate ( impactVFX, co.contacts[0].point, Quaternion.identity) as GameObject;
-            Destroy(impact, 0.5f);
-            collided = true;
-            AudioSource.PlayClipAtPoint(impactFX, co.transform.position, 5f);
-            Destroy(gameObject);
-        }
-    }
-
-    void Update()
+    void OnCollisionEnter(Collision collision)
     {
-        if (!IsOwner) return;
-        Destroy(gameObject, 3);
+        if (collided) return;
+
+        if (collision.gameObject.CompareTag("Player") || 
+            collision.gameObject.CompareTag("Bullet") || 
+            collision.gameObject.CompareTag("Boost Ring"))
+        {
+            return; // ignore
+        }
+
+        if (impactVFX != null)
+        {
+            GameObject impact = Instantiate(impactVFX, collision.contacts[0].point, Quaternion.identity);
+            Destroy(impact, 0.5f);
+        }
+
+        if (impactFX != null)
+        {
+            AudioSource.PlayClipAtPoint(impactFX, collision.transform.position, 5f);
+        }
+
+        collided = true;
+        Destroy(gameObject);
     }
 }

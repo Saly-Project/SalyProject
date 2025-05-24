@@ -2082,15 +2082,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc204a589b2f2e478ee9823c5fb7ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StartHostButton: {fileID: 0}
-  m_StartClientButton: {fileID: 0}
-  MenuUI: {fileID: 2094392344}
-  Hyperlane: {fileID: 0}
-  Warpway: {fileID: 0}
-  Oblivion: {fileID: 0}
-  Random: {fileID: 0}
-  inputField: {fileID: 0}
-  MapName: 
 --- !u!114 &449749382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2106,7 +2097,7 @@ MonoBehaviour:
   createRoomInput: {fileID: 107627150}
   createRoomButton: {fileID: 1449633027}
   roomListContainer: {fileID: 812227160}
-  roomListEntryPrefab: {fileID: 2920212732548987534, guid: ba4e2ebbab83a4793a6f5752709701b0, type: 3}
+  roomListEntryPrefab: {fileID: 1459152290864945703, guid: ba4e2ebbab83a4793a6f5752709701b0, type: 3}
   hyperlaneUI: {fileID: 701499780}
   warpwayUI: {fileID: 1960312139}
   oblivionUI: {fileID: 451755617}

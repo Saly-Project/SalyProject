@@ -328,6 +328,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2928154432554739168, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: Synchronization
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2928154432554739168, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: ObservedComponentsFoldoutOpen
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 905517520704337997, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
       propertyPath: m_Name
       value: Solaris X
@@ -405,6 +413,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7058860665544151744, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058860665544151744, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 3218230495
       objectReference: {fileID: 0}
@@ -419,6 +431,10 @@ PrefabInstance:
     - target: {fileID: 8813770219011209700, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113070640145657133, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5460471277109305822, guid: 489fc0a51cec2a740a657b5e941e9588, type: 3}

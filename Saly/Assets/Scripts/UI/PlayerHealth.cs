@@ -1,50 +1,52 @@
 using UnityEngine;
-using Unity.Netcode;
-using Unity.Multiplayer.Center.Common;
 using UnityEngine.UI;
 using System.Collections;
-using System;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class PlayerHealth : NetworkBehaviour
+public class PlayerHealth : MonoBehaviourPun
 {
     public float maxHealth = 100;
     private float _Health;
 
-    // UI and recharge
     public Image HealthBar;
     public float ChargeRate;
     private Coroutine rechargeHealth;
 
-
-
-
-    private void Awake(){
+    private void Awake()
+    {
         _Health = maxHealth;
     }
 
-    public override void OnNetworkSpawn()
+    void Start()
     {
-        base.OnNetworkSpawn();
-
-        if (!IsOwner){
+        // Disable this script for remote players
+        if (!photonView.IsMine)
+        {
             enabled = false;
-            return;
         }
-
-        
     }
 
-    [ServerRpc(RequireOwnership = false)]
-    public void TakeDamageServerRpc(int damage)
-    {   
+    // Called by local player to apply damage across the network
+    public void TakeDamage(int damage)
+    {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_TakeDamage", RpcTarget.AllBuffered, damage);
+        }
+    }
 
+    [PunRPC]
+    void RPC_TakeDamage(int damage)
+    {
         _Health -= damage;
-        Debug.Log(_Health / maxHealth);
+        Debug.Log("Current Health: " + _Health);
         HealthBar.fillAmount = _Health / maxHealth;
 
-        
-
-        if (_Health <= 0) Die();
+        if (_Health <= 0)
+        {
+            Die();
+        }
 
         if (rechargeHealth != null) StopCoroutine(rechargeHealth);
         rechargeHealth = StartCoroutine(RechargeHealth());
@@ -52,28 +54,35 @@ public class PlayerHealth : NetworkBehaviour
 
     private void Die()
     {
-        Debug.Log("player is dead");
+        Debug.Log(gameObject.name + " is dead.");
+        // Handle death logic here
     }
 
-    private IEnumerator RechargeHealth(){
+    private IEnumerator RechargeHealth()
+    {
         yield return new WaitForSeconds(5f);
 
-        while (_Health < maxHealth) 
+        while (_Health < maxHealth)
         {
-            _Health += (int)ChargeRate / 50;
+            _Health += ChargeRate / 50f;
             if (_Health > maxHealth) _Health = maxHealth;
             HealthBar.fillAmount = _Health / maxHealth;
-            yield return new WaitForSeconds(.05f);
-        
+            yield return new WaitForSeconds(0.05f);
         }
-
-        
     }
 
-    public void TakeDamage(float amount)
+    // Optional: Local use for instant feedback without syncing
+    public void TakeLocalDamage(float amount)
     {
+        if (!photonView.IsMine) return;
+
         _Health -= amount;
-        Debug.Log(gameObject.name + " perd " + amount + " PV");
-        if (_Health <= 0) Destroy(gameObject);
+        Debug.Log(gameObject.name + " lost " + amount + " HP");
+        HealthBar.fillAmount = _Health / maxHealth;
+
+        if (_Health <= 0)
+        {
+            Die();
+        }
     }
 }

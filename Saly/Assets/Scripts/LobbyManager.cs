@@ -24,6 +24,10 @@ public class LobbiesList : MonoBehaviourPunCallbacks
 
     void Start()
     {
+        Debug.Log("👽 PlayerSpawner Start()");
+        Debug.Log("InRoom: " + PhotonNetwork.InRoom);
+        Debug.Log("IsMasterClient: " + PhotonNetwork.IsMasterClient);
+        Debug.Log("IsConnectedAndReady: " + PhotonNetwork.IsConnectedAndReady);
         PhotonNetwork.AutomaticallySyncScene = true;
         createRoomButton.onClick.AddListener(OnCreateRoomClicked);
     }
@@ -36,6 +40,10 @@ public class LobbiesList : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
+        Debug.Log("✅ OnJoinedRoom called on: " + PhotonNetwork.NickName);
+        Debug.Log("Scene: " + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        Debug.Log("PlayerCount: " + PhotonNetwork.CurrentRoom.PlayerCount);
+
         Debug.Log("✅ Joined Lobby.");
         isInLobby = true;
     }
@@ -185,5 +193,21 @@ public class LobbiesList : MonoBehaviourPunCallbacks
         Debug.Log("🔁 Joining room: " + roomName);
         PhotonNetwork.JoinRoom(roomName);
     }
+
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        Debug.Log("👥 Player joined: " + newPlayer.NickName);
+        Debug.Log("👥 Total players in room: " + PhotonNetwork.CurrentRoom.PlayerCount);
+
+        if (PhotonNetwork.CurrentRoom.PlayerCount >= 2 && PhotonNetwork.IsMasterClient)
+        {
+            Debug.Log("✅ Two or more players in the room. You can start the game now.");
+            // You can add any logic here, for example:
+            // PhotonNetwork.LoadLevel(selectedMap); // if you want to reload, or
+            // Enable a "Start Game" button, etc.
+        }
+    }
+
 
 }

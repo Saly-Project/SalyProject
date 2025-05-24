@@ -1,26 +1,45 @@
-using Photon.Pun;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class PlayerSpawner : MonoBehaviourPunCallbacks
 {
     public GameObject playerPrefab;
+    private bool hasSpawned = false;
 
     void Start()
     {
-        if (!PhotonNetwork.IsConnected || !PhotonNetwork.InRoom) return;
+        // Scene is already loaded, try spawning
+        TrySpawn();
+    }
 
-        // Get spawn points
-        Transform[] spawnPoints = GameObject.Find("SpawnPoint")?.GetComponentsInChildren<Transform>();
+    public override void OnJoinedRoom()
+    {
+        Debug.Log("✅ OnJoinedRoom triggered. Attempting to spawn player.");
+        TrySpawn();
+    }
 
-        if (spawnPoints == null || spawnPoints.Length <= 1)
+    private void TrySpawn()
+    {
+        if (hasSpawned || !PhotonNetwork.InRoom)
         {
-            Debug.LogError("No spawn points found! Make sure 'Spawns' has children.");
+            Debug.Log("⚠ Cannot spawn: Already spawned or not in room.");
+            return;
+        }
+
+        Transform[] spawnPoints = GameObject.Find("Spawns").GetComponentsInChildren<Transform>();
+        if (spawnPoints.Length <= 1)
+        {
+            Debug.LogError("❌ No spawn points found! Make sure 'Spawns' has children.");
             return;
         }
 
         int index = PhotonNetwork.LocalPlayer.ActorNumber % (spawnPoints.Length - 1);
-        Transform spawnPoint = spawnPoints[index + 1]; // skip the parent
+        Transform spawnPoint = spawnPoints[index + 1];
 
+        Debug.Log($"🚀 Spawning player at index {index}: ({spawnPoint.position})");
         PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint.position, spawnPoint.rotation);
+        hasSpawned = true;
     }
 }
