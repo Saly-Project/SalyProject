@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 6345
+  controlID: 13573
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -47,8 +47,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 523
-    y: 24
+    x: 522
+    y: 79
     width: 1386
     height: 827
   m_SerializedDataModeController:
@@ -95,7 +95,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 6346
+  controlID: 13515
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 6347
+  controlID: 13491
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -243,9 +243,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 8eaafeff7ec1feff9612ffff4c16ffff6c19ffffe2c9ffff984d01005c590100de5a0100865d0100a25d0100
+      m_SelectedIDs: d488f7ff
+      m_LastClickedID: -554796
+      m_ExpandedIDs: 44aafeff5caafeff74aafeff8caafeff8eaafeff7ec1feff9612ffff4c16ffff6c19ffffe2c9ffff984d01005c590100de5a0100025b0100865d0100a25d0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.07343124, y: 0.6891569, z: -0.070539266, w: -0.71742296}
     speed: 2
-    m_Value: {x: -0.07343121, y: 0.68915665, z: -0.07053924, w: -0.7174227}
+    m_Value: {x: -0.07343124, y: 0.6891569, z: -0.070539266, w: -0.717423}
   m_Size:
     m_Target: 14.055351
     speed: 2
@@ -4393,7 +4393,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Skills
+    - Assets/TextMesh Pro/Fonts/Ship Fonts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -4403,16 +4403,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Scripts/Skills
+  - Assets/TextMesh Pro/Fonts/Ship Fonts
   m_LastFoldersGridSize: 71
   m_LastProjectPath: C:\Users\Cooler Master\Documents\epita\SalyProject\Saly
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 319}
-    m_SelectedIDs: 9c390100
-    m_LastClickedID: 80284
-    m_ExpandedIDs: 000000009a3801009c3801009e380100a0380100a2380100a4380100a6380100a8380100aa380100ac380100ae380100b0380100b2380100b4380100b6380100b8380100ba380100bc380100be380100c0380100c2380100c4380100c6380100c8380100ca380100cc380100ce380100d0380100d2380100d4380100d6380100d8380100da380100dc380100de380100e038010000ca9a3b
+    scrollPos: {x: 0, y: 334}
+    m_SelectedIDs: 88110200
+    m_LastClickedID: 135560
+    m_ExpandedIDs: 000000009a3801009c3801009e380100a0380100a2380100a4380100a6380100a8380100aa380100ac380100ae380100b0380100b2380100b4380100b6380100b8380100ba380100bc380100be380100c0380100c2380100c4380100c6380100c8380100ca380100cc380100ce380100d0380100d2380100d4380100d6380100d8380100da380100dc380100de380100e0380100a439010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4467,8 +4467,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: d488f7ff
+    m_LastClickedInstanceID: -554796
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300003eaa0000f401010092fd0000b214010000000000
     m_RenameOverlay:
