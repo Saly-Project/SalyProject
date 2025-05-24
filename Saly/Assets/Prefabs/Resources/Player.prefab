@@ -3341,7 +3341,7 @@ MonoBehaviour:
   LeftFirePoint: {fileID: 2850296069838715382}
   RightFirePoint: {fileID: 8813770219011209700}
   fireRate: 8
-  damage: 10
+  damage: 25
   maxRange: 100
   weaponHitLayers:
     serializedVersion: 2
@@ -3398,6 +3398,7 @@ MonoBehaviour:
   HealthBar: {fileID: 3064858532616371015}
   ChargeRate: 10
   Model: {fileID: 9011041059911779299}
+  dieDuration: 5
 --- !u!65 &9173964662824358329
 BoxCollider:
   m_ObjectHideFlags: 0

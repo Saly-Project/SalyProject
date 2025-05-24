@@ -42,11 +42,6 @@ public class WeaponShooting : MonoBehaviourPun
         {
             destination = hit.point;
 
-            // damage relative to distance
-            float distance = Vector3.Distance(transform.position, hit.point);
-            float normalizedDistance = Mathf.Clamp01((distance - 7.5f) / (maxRange - 7.5f));
-            damage = (int)Mathf.Lerp(10, 1, normalizedDistance);
-
             if (hit.transform.TryGetComponent(out PhotonView targetPV))
             {
                 targetPV.RPC("TakeDamageRPC", targetPV.Owner, damage);
