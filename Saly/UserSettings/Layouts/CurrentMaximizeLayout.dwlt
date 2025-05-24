@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3700
+  controlID: 5677
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -104,23 +104,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1386
-      height: 806
-    m_Scale: {x: 0.721875, y: 0.721875}
-    m_Translation: {x: 693, y: 403}
+      width: 2560
+      height: 1256
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 1280, y: 628}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -960
-      y: -558.2684
-      width: 1920
-      height: 1116.5367
+      x: -1280
+      y: -628
+      width: 2560
+      height: 1256
     m_MinimalGUI: 1
-  m_defaultScale: 0.721875
-  m_LastWindowPixelSize: {x: 1386, y: 827}
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 2560, y: 1277}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3713
+  controlID: 5620
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3656
+  controlID: 5611
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: eebd0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 8eaafeff7ec1feff9612ffff4c16ffff6c19ffffe2c9ffff984d01005c590100de5a0100865d0100a25d0100
       m_RenameOverlay:
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.07343124, y: 0.6891569, z: -0.070539266, w: -0.71742296}
     speed: 2
-    m_Value: {x: -0.07343121, y: 0.68915665, z: -0.07053924, w: -0.7174227}
+    m_Value: {x: -0.07343124, y: 0.6891569, z: -0.070539266, w: -0.717423}
   m_Size:
     m_Target: 14.055351
     speed: 2
@@ -4467,9 +4467,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: eebd0000
-    m_LastClickedInstanceID: 48622
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300003eaa0000f401010092fd0000b214010000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

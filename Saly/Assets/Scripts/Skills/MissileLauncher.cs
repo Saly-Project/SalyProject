@@ -18,6 +18,7 @@ public class MissileLauncher : Skill
         UIskill.SetActive(Charged);
     }
 
+    [PunRPC]
     void LauchMissile()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Player");
