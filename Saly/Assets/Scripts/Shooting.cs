@@ -19,13 +19,11 @@ public class WeaponShooting : MonoBehaviourPun
     public float maxRange = 65f;
     public LayerMask weaponHitLayers;
 
-    public GameManagerPhotonFreeze gameManagerPhotonFreeze;
-
     void Update()
     {
         if (!photonView.IsMine) return;
 
-        if (!PauseMenu.isPaused && Input.GetButton("Fire") && Time.time >= timeToFire && !gameManagerPhotonFreeze.isFrozen)
+        if (!PauseMenu.isPaused && Input.GetButton("Fire") && Time.time >= timeToFire && !GetComponent<ShipController>().isFrozen)
         {
             timeToFire = Time.time + 1 / fireRate;
             AudioSource.PlayClipAtPoint(projectileFX, transform.position, 0.5f);

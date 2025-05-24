@@ -67,7 +67,7 @@ public class ShipController : MonoBehaviourPunCallbacks
     private float SlowTimer = 0;
     private float maxSpeed = float.MaxValue;
 
-    private bool isFrozen = true;
+    public bool isFrozen = true;
 
     public void SetFrozen(bool freeze)
     {

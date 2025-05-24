@@ -17,8 +17,6 @@ public class GameManagerPhotonFreeze : MonoBehaviourPunCallbacks
     private float countdown;
     private bool gameStarted = false;
 
-    public bool isFrozen = true;
-
     void Start()
     {
         countdown = countdownDuration;
@@ -60,13 +58,14 @@ public class GameManagerPhotonFreeze : MonoBehaviourPunCallbacks
 
     void FreezeAllPlayers(bool state)
     {
-        isFrozen = state;
-
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Player"))
         {
             var controller = go.GetComponent<ShipController>();
-            if (controller != null) 
+            if (controller != null)
+            {
+                controller.isFrozen = state;
                 controller.enabled = !state;
+            }
         }
     }
 
