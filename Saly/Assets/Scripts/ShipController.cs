@@ -106,6 +106,8 @@ public class ShipController : MonoBehaviourPunCallbacks
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        WinUI.SetActive(false);
+        LoseUI.SetActive(false);
     }
 
     private void HandleInputs()
@@ -278,8 +280,6 @@ public class ShipController : MonoBehaviourPunCallbacks
     {
         if (other.CompareTag("FinalCheckpoint"))
         {
-            FinishUI.SetActive(true);
-
             if (GameManagerPhotonFreeze.isThereWinner)
             {
                 WinUI.SetActive(false);
