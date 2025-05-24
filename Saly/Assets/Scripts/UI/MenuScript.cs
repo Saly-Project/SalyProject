@@ -11,7 +11,6 @@ public class MenuScript : MonoBehaviour
     public GameObject LobbyMenuUI;
     public GameObject SpaceshipMenuUI;
     public GameObject SettingsMenuUI;
-    public GameObject mainMenu;
     public GameObject usernameMenu;
 
     [SerializeField] GameObject CreateButton;
@@ -27,38 +26,41 @@ public class MenuScript : MonoBehaviour
     // Start Main Menu automaticaly
     void Start()
     {
-        MainMenuUI.SetActive(true);
+        ShowOnly(MainMenuUI);
     }
 
+    void ShowOnly(GameObject menu)
+    {
+        MainMenuUI.SetActive(false);
+        LobbyMenuUI.SetActive(false);
+        SpaceshipMenuUI.SetActive(false);
+        SettingsMenuUI.SetActive(false);
+        usernameMenu.SetActive(false);
+
+        menu.SetActive(true);
+    }
 
     // Main menu buttons
     public void Play()
     {
-        MainMenuUI.SetActive(false);
-        LobbyMenuUI.SetActive(true);
+        ShowOnly(LobbyMenuUI);
     }
 
     public void Spaceship()
     {
-        MainMenuUI.SetActive(false);
-        SpaceshipMenuUI.SetActive(true);
+        ShowOnly(SpaceshipMenuUI);
     }
 
     public void Settings()
     {
-        MainMenuUI.SetActive(false);
-        SettingsMenuUI.SetActive(true);
+        ShowOnly(SettingsMenuUI);
     }
 
 
     // Back to main button (does work for all menu UI) 
     public void BackToMain()
     {
-        PlayerPrefs.Save();
-        LobbyMenuUI.SetActive(false);
-        SpaceshipMenuUI.SetActive(false);
-        SettingsMenuUI.SetActive(false);
-        MainMenuUI.SetActive(true);
+        ShowOnly(MainMenuUI);
     }
 
 
@@ -139,7 +141,7 @@ public class MenuScript : MonoBehaviour
 
     public void GoToUsernameMenu()
     {
-        mainMenu.SetActive(false);
+        MainMenuUI.SetActive(false);
         usernameMenu.SetActive(true);
     }
 

@@ -19,6 +19,7 @@ TagManager:
   - AI
   - FinalCheckpoint
   - Model
+  - Asteroid
   layers:
   - Default
   - TransparentFX

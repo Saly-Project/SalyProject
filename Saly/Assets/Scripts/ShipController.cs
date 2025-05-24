@@ -276,6 +276,25 @@ public class ShipController : MonoBehaviourPunCallbacks
         Hud.text = (Math.Round(displaySpeed / 5.0) * 5).ToString("F0") + " km.h";
     }
 
+
+    private void OnCollisionStay(UnityEngine.Collision other)
+    {
+        if (other.gameObject.CompareTag("Asteroid"))
+        {
+            // Direction opposée à l’impact
+            Vector3 pushDirection = transform.position - other.transform.position;
+            pushDirection.Normalize();
+
+            // Applique une force dans cette direction (ajuste la valeur de la force)
+            float pushForce = forwardSpeed;
+            Rigidbody rb = GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.AddForce(pushDirection * pushForce, ForceMode.Impulse);
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("FinalCheckpoint") && photonView.IsMine)
