@@ -148,7 +148,9 @@ Transform:
   m_LocalPosition: {x: 14.438148, y: 78.12981, z: -107.59981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1661603165}
+  - {fileID: 1355854446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &168033015
@@ -265,7 +267,6 @@ Transform:
   m_Children:
   - {fileID: 1976353740}
   - {fileID: 198479176}
-  - {fileID: 1661603165}
   - {fileID: 1335691361}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -383,7 +384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93de2150a4de4ee5b9e0f86e7cf6b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 5017674571320473805, guid: 991d7c03cbf769b4f809d644abc99864, type: 3}
 --- !u!1001 &382635667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1366,6 +1366,59 @@ Transform:
   - {fileID: 1333028612}
   m_Father: {fileID: 209191859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1355854445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355854446}
+  - component: {fileID: 1355854447}
+  m_Layer: 0
+  m_Name: Boost Orbs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1355854446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355854445}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -745.9435, y: -531.8752, z: 952.0026}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 168033014}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1355854447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355854445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a80cbddccfa744e9e331dc0d8c33da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointsParent: {fileID: 1188602994}
+  asteroidPrefabs:
+  - {fileID: 2140427511478123546, guid: e344429e1e91caa4cb2b3db17d9eaf42, type: 3}
+  interpolationDistance: 200
+  asteroidsPerPoint: 1
+  tunnelRadius: 75
+  safeRadius: 100
+  particleHintPrefab: {fileID: 0}
+  particleSpacing: 100
 --- !u!1 &1377358447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,12 +1611,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661603164}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -745.9435, y: -531.8752, z: 952.0026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 209191859}
+  m_Father: {fileID: 168033014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1661603166
 MonoBehaviour:
