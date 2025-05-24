@@ -3397,6 +3397,7 @@ MonoBehaviour:
   maxHealth: 100
   HealthBar: {fileID: 3064858532616371015}
   ChargeRate: 10
+  Model: {fileID: 9011041059911779299}
 --- !u!65 &9173964662824358329
 BoxCollider:
   m_ObjectHideFlags: 0

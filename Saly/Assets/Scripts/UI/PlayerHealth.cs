@@ -47,13 +47,14 @@ public class PlayerHealth : MonoBehaviourPun
 
         if (_Health <= 0)
         {
-            Die(5);
+            photonView.RPC("Die", RpcTarget.AllBuffered, 5);
         }
 
         if (rechargeHealth != null) StopCoroutine(rechargeHealth);
         rechargeHealth = StartCoroutine(RechargeHealth());
     }
 
+    [PunRPC]
     private void Die(float duration)
     {
         Model.SetActive(false);
@@ -68,6 +69,7 @@ public class PlayerHealth : MonoBehaviourPun
 
         Model.SetActive(true);
         GetComponent<ShipController>().isFrozen = false;
+        _Health = maxHealth;
     }
 
     private IEnumerator RechargeHealth()
@@ -94,7 +96,7 @@ public class PlayerHealth : MonoBehaviourPun
 
         if (_Health <= 0)
         {
-            Die(5);
+            photonView.RPC("Die", RpcTarget.AllBuffered, 5);
         }
     }
 
