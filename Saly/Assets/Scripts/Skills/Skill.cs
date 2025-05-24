@@ -1,6 +1,7 @@
+using Unity.Netcode;
 using UnityEngine;
 
-public class Skill : MonoBehaviour
+public class Skill : NetworkBehaviour
 {
     public bool Charged;
     public GameObject UIskill;
